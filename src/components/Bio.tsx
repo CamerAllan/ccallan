@@ -1,16 +1,20 @@
 import React from 'react'
-import { Avatar as Image } from '@material-ui/core';
+import Avatar from './Avatar'
+import { Box, Link } from '@material-ui/core'
 
-interface BioProbs {
-    altText: string;
-    src: string;
+interface BioProps {
+    name: string;
+    imageSrc: string;
 }
 
-const Bio: React.FC<BioProbs> = (props) => {
+const Bio: React.FC<BioProps> = (props) => {
+
   return (
-    <div>
-        <Image alt={props.altText} src={props.src} variant='circle'/>
-    </div>
+    <Box>
+      <Avatar altText={props.name} src={props.imageSrc}/>
+      <h1>{props.name}</h1>
+      <p>Hi! I'm a software engineer working at <Link href='https://www.dunnhumby.com/'>dunnhumby</Link>. Currently experimenting with little projects in Unity. </p>
+    </Box>
   )
 }
 export default Bio

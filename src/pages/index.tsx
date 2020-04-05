@@ -1,18 +1,27 @@
 import React from 'react'
+import { Container, Typography, makeStyles } from '@material-ui/core'
+import BuildIcon from '@material-ui/icons/Build';
 
-export default () => (
-  <div style={{ textAlign: 'center' }}>
-    <h1>
-      Welcome to React-Static <br /> + TypeScript
-    </h1>
-    <p>
-      Learn{' '}
-      <a href="https://github.com/sw-yx/react-typescript-cheatsheet">
-        React + TypeScript
-      </a>
-    </p>
-    <p>
-      <a href="https://twitter.com/swyx">Report issues with this template</a>
-    </p>
-  </div>
-)
+const useStyles = makeStyles(() => ({
+  root: {
+  }
+}));
+
+export default () => {
+  
+  const classes = useStyles();
+
+  return (
+  <Container className={classes.root}>
+    <Typography align='center'>
+
+        <h1>
+            This site is under construction!
+        </h1>
+        <p>
+            Check back frequently for updates!
+        </p>
+      <BuildIcon fontSize='large'/>
+    </Typography>
+</Container>
+)}
