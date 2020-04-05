@@ -1,15 +1,21 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
-export const theme = createMuiTheme({
+export default createMuiTheme({
   palette: {
+    type: 'dark',
     primary: {
       // light: will be calculated from palette.primary.main,
-      main: '#334e58',
+      main: '#d64933',
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
     },
     secondary: {
-      main: '#ffbf46',
+      main: '#031926',
+    },
+    
+    background: {
+      paper: '#fff',
+      default: "#30434f"
     },
     // Used by `getContrastText()` to maximize the contrast between
     // the background and the text.

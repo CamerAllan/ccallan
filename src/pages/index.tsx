@@ -1,18 +1,15 @@
 import React from 'react'
+import { Container, Typography } from '@material-ui/core'
 
 export default () => (
-  <div style={{ textAlign: 'center' }}>
-    <h1>
-      Welcome to React-Static <br /> + TypeScript
-    </h1>
-    <p>
-      Learn{' '}
-      <a href="https://github.com/sw-yx/react-typescript-cheatsheet">
-        React + TypeScript
-      </a>
-    </p>
-    <p>
-      <a href="https://twitter.com/swyx">Report issues with this template</a>
-    </p>
-  </div>
+  <Container>
+    <Typography align='center'>
+        <h1>
+            This site is under development!
+        </h1>
+        <p>
+            Check back frequently for updates!
+        </p>
+    </Typography>
+</Container>
 )
