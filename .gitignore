@@ -121,4 +121,4 @@ sketch
 
 # End of https://www.gitignore.io/api/node,react
 
-artifacts/*
+artifacts/

@@ -48,4 +48,22 @@ export default {
     require.resolve('react-static-plugin-reach-router'),
     require.resolve('react-static-plugin-sitemap'),
   ],
+  beforeRenderToElement: (App, { meta }) => props => {
+        const generateClassName = createGenerateClassName();
+        // Create a sheetsRegistry instance.
+        meta.jssSheetsRegistry = new SheetsRegistry();
+        // fresh sheet manager
+        props.sheetsManager = new Map();
+        props.theme = createMuiTheme(providerProps.muiTheme);
+        return (
+            <JssProvider generateClassName={ generateClassName } registry={ meta.jssSheetsRegistry }>
+                <App { ...props } />
+            </JssProvider>
+        );
+    },
+    Head: ({ meta }) => {
+        return <React.Fragment>
+            <style id="jss-server-side" dangerouslySetInnerHTML={{ __html: meta.jssSheetsRegistry.toString() }}/>
+        </React.Fragment>
+    },
 }

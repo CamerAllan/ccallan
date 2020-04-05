@@ -1,6 +1,6 @@
 import React from 'react'
 import Bio from './Bio'
-import { Container, makeStyles, Typography, Tabs, Tab, Box } from '@material-ui/core'
+import { makeStyles, Tabs, Tab, Box } from '@material-ui/core'
 import { Link } from '@reach/router';
 
 const useStyles = makeStyles(theme => ({
