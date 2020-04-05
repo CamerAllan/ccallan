@@ -19,11 +19,7 @@ export default () => {
 
     return (
         <Box className={classes.root}>
-            <Container >
-                <Typography align='center'>
-                    <Bio name='Cameron Allan' imageSrc='/images/pp4.jpg' />
-                </Typography>
-            </Container>
+            <Bio name='Cameron Allan' imageSrc='/images/pp4.jpg' />
             <Tabs component='div' value='About' centered variant='fullWidth' orientation='vertical'>
                 <Tab label='About'>
                     <Link to="/about">About</Link>
