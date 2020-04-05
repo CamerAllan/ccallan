@@ -1,8 +1,11 @@
 import axios from 'axios'
 import path from 'path'
+import { createGenerateClassName } from '@material-ui/core/styles'
 // import { Post } from './types'
 
 // Typescript support in static.config.js is not yet supported, but is coming in a future update!
+
+const generateClassName = createGenerateClassName()
 
 export default {
   entry: path.join(__dirname, 'src', 'index.tsx'),
@@ -27,6 +30,14 @@ export default {
     ]
   },
   plugins: [
+    [
+      'react-static-plugin-jss',
+      {
+        providerProps: {
+          generateClassName,
+        },
+      }
+    ],
     'react-static-plugin-typescript',
     [
       require.resolve('react-static-plugin-source-filesystem'),
@@ -34,7 +45,6 @@ export default {
         location: path.resolve('./src/pages'),
       },
     ],
-    'react-static-plugin-jss',
     require.resolve('react-static-plugin-reach-router'),
     require.resolve('react-static-plugin-sitemap'),
   ],
