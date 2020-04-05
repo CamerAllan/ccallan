@@ -1,15 +1,27 @@
 import React from 'react'
-import { Container, Typography } from '@material-ui/core'
+import { Container, Typography, makeStyles } from '@material-ui/core'
+import BuildIcon from '@material-ui/icons/Build';
 
-export default () => (
-  <Container>
+const useStyles = makeStyles(() => ({
+  root: {
+  }
+}));
+
+export default () => {
+  
+  const classes = useStyles();
+
+  return (
+  <Container className={classes.root}>
     <Typography align='center'>
+
         <h1>
-            This site is under development!
+            This site is under construction!
         </h1>
         <p>
             Check back frequently for updates!
         </p>
+      <BuildIcon fontSize='large'/>
     </Typography>
 </Container>
-)
+)}

@@ -13,7 +13,7 @@ const Bio: React.FC<BioProps> = (props) => {
     <Box>
       <Avatar altText={props.name} src={props.imageSrc}/>
       <h1>{props.name}</h1>
-      <p>Hi! I'm a software engineer currently working at <Link href='https://www.dunnhumby.com/'>dunnhumby</Link>. Currently experimenting with little projects in Unity. </p>
+      <p>Hi! I'm a software engineer working at <Link href='https://www.dunnhumby.com/'>dunnhumby</Link>. Currently experimenting with little projects in Unity. </p>
     </Box>
   )
 }

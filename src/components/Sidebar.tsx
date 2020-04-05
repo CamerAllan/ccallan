@@ -25,11 +25,11 @@ export default () => {
                 </Typography>
             </Container>
             <Tabs component='div' value='About' centered variant='fullWidth' orientation='vertical'>
-                <Tab label='Home'>
-                    <Link to="/">Home</Link>
-                </Tab>
                 <Tab label='About'>
                     <Link to="/about">About</Link>
+                </Tab>
+                <Tab label='Projects'>
+                    <Link to="/projects">Projects</Link>
                 </Tab>
                 <Tab label='Blog'>
                     <Link to="/blog">Blog</Link>
