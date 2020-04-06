@@ -21,18 +21,9 @@ export default () => {
         <Box className={classes.root}>
             <Bio name='Cameron Allan' imageSrc='/images/pp4.jpg' />
             <Tabs component='div' value='About' centered variant='fullWidth' orientation='vertical'>
-                <Tab label='About'>
-                    <Link to="/about">About</Link>
-                </Tab>
-                <Tab label='Projects'>
-                    <Link to="/projects">Projects</Link>
-                </Tab>
-                <Tab label='Blog'>
-                    <Link to="/blog">Blog</Link>
-                </Tab>
-                {/* <Tab label='Dynamic'>
-                    <Link to="/dynamic">Dynamic</Link>
-                </Tab> */}
+                <Tab label='About' component={Link} to='about'/>
+                <Tab label='Blog' component={Link} to='blog'/>
+                <Tab label='Projects' component={Link} to='projects'/>
             </Tabs>
         </Box>
     )
