@@ -1,5 +1,6 @@
-import axios from 'axios'
+import fs from 'fs'
 import path from 'path'
+import matter from 'gray-matter'
 import { createGenerateClassName } from '@material-ui/core/styles'
 // import { Post } from './types'
 
@@ -7,20 +8,30 @@ import { createGenerateClassName } from '@material-ui/core/styles'
 
 const generateClassName = createGenerateClassName()
 
+const blogPath = 'public/content/posts/';
+
+const getPosts = () => {
+  const posts = []
+  
+  fs.readdirSync(blogPath).forEach(file => {
+    const contents = fs.readFileSync(blogPath + file, 'utf8');
+    posts.push(matter(contents));
+  });
+  return posts;
+}
+
 export default {
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getRoutes: async () => {
-    const { data: posts } /* :{ data: Post[] } */ = await axios.get(
-      'https://jsonplaceholder.typicode.com/posts'
-    )
+    const posts = getPosts()
     return [
       {
         path: '/blog',
         getData: () => ({
-          posts,
+          posts: posts.map(post => post.data),
         }),
-        children: posts.map((post /* : Post */) => ({
-          path: `/post/${post.id}`,
+        children: posts.map((post) => ({
+          path: `/post/${post.data.id}`,
           template: 'src/containers/Post',
           getData: () => ({
             post,
@@ -48,22 +59,4 @@ export default {
     require.resolve('react-static-plugin-reach-router'),
     require.resolve('react-static-plugin-sitemap'),
   ],
-  beforeRenderToElement: (App, { meta }) => props => {
-        const generateClassName = createGenerateClassName();
-        // Create a sheetsRegistry instance.
-        meta.jssSheetsRegistry = new SheetsRegistry();
-        // fresh sheet manager
-        props.sheetsManager = new Map();
-        props.theme = createMuiTheme(providerProps.muiTheme);
-        return (
-            <JssProvider generateClassName={ generateClassName } registry={ meta.jssSheetsRegistry }>
-                <App { ...props } />
-            </JssProvider>
-        );
-    },
-    Head: ({ meta }) => {
-        return <React.Fragment>
-            <style id="jss-server-side" dangerouslySetInnerHTML={{ __html: meta.jssSheetsRegistry.toString() }}/>
-        </React.Fragment>
-    },
 }
