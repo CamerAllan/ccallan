@@ -1,7 +1,10 @@
 ---
 id: test-post
-date: 6/4/20
+date: 6 Apr, 2020
 title: Test post!
+description: This is my first post, which I'll be using as a reference as I work on the site. It might change or disappear but hopefully there will be more to come!
+live: false
+tags: [tech]
 ---
 
 # Hello!
@@ -11,6 +14,8 @@ This is my first post on this site.
 I'll be using this as a baseline for development, so it might grow to allow me to try out different features.
 
 If you're interested in what's going on behind the scenes, keep reading. I'll elaborate in a future post when I have more of an understanding myself.
+
+I promise that this post will become jumbled - I hope the rest do not.
 
 ## Tech Stack
 
@@ -24,5 +29,5 @@ I'm writing these posts in markdown, then having react-static scoop them up duri
 
 ## That all sounds great, but why do I see flickers of odd stuff when navigating this site?
 
-I am stylnig my application with *css-in-js*. react-static is not currently looking for this, so it doesn't know to create any static css files. This leaves us with unstyled html. So what you're really seeing is react-static *not-so-slyly* swapping in the full js app.
+I am styling my application using *css-in-js*. react-static is not currently looking for this, so it doesn't know to create any static css files. This leaves us with unstyled html. So what you're really seeing is react-static *not-so-slyly* swapping in the full js app. 
 
