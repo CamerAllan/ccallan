@@ -2,21 +2,22 @@ import React from "react";
 import Content from "./Content";
 import Sidebar from "./Sidebar";
 import { makeStyles, Box } from "@material-ui/core";
-import { MD } from "../constants/Constants";
+import { SM, SPACING } from "../constants/Constants";
 
 const useStyles = makeStyles(theme => ({
     container: {
         display: 'flex',
         flexDirection: 'column',
-        [theme.breakpoints.up(MD)]: { flexDirection: 'row' }
+        [theme.breakpoints.up(SM)]: { flexDirection: 'row', height: '100vh' }
     },
     
     sidebar: {
         width: '100%',
-        [theme.breakpoints.up(MD)]: { width: '300px', height: '100vh' }
+        [theme.breakpoints.up(SM)]: { width: '300px'  }
     },
     content: {
-        padding: theme.spacing(3),
+        overflowY: 'auto', 
+        padding: theme.spacing(SPACING.MEDIUM),
         flex: '1'
     }
 }));

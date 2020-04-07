@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouteData } from 'react-static'
-import { Link } from '@reach/router'
 import ReactMarkdown from 'react-markdown'
+import ColorLink from 'components/util/Link'
 
 export default () => {
   const { post }: { post: any } = useRouteData()
@@ -14,7 +14,7 @@ export default () => {
         {post.date}
       </h2>
       <div>
-        <Link to="/blog/">{'<'} Back</Link>
+        <ColorLink to="/blog/">{'<'} Back</ColorLink>
         <ReactMarkdown source={post.content}/>
       </div>
     </>

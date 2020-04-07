@@ -1,13 +1,27 @@
 import React from "react";
 import { Router } from "@reach/router";
-import Dynamic from "containers/Dynamic";
 import { Routes } from "react-static";
+import { makeStyles, Box, LinearProgress } from "@material-ui/core";
 
-export default () => (
-    <React.Suspense fallback={<em>Loading...</em>}>
-        <Router>
-            <Dynamic path="dynamic" />
-            <Routes path="*" />
-        </Router>
-    </React.Suspense>
-)
+const useStyles = makeStyles({
+    root: {
+        maxWidth: 750
+    }
+}) 
+
+const Content: React.FC = () => {
+    
+    const classes = useStyles();
+    
+    return (
+        <Box className={classes.root}>
+            <React.Suspense fallback={<LinearProgress variant="query" />}>
+                <Router>
+                    <Routes path="*" />
+                </Router>
+            </React.Suspense>
+        </Box>
+    )
+}
+
+export default Content ;

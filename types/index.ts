@@ -3,9 +3,15 @@ export interface Post {
   content: string
 }
 
+export type tag = 'personal' | 'tech'
+
 export interface PostData {
     id: number
     title: string
     date: string
-    body: string
+    description: string
+    live: boolean
+    tags: tag[]
 }
+
+
