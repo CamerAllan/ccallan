@@ -10,13 +10,25 @@ const generateClassName = createGenerateClassName()
 
 const blogPath = 'public/content/posts/';
 
+const wordCount = (content) => {
+    return (content.split(" ").length - 1)
+}
+
 const getPosts = () => {
   const posts = []
   
   fs.readdirSync(blogPath).forEach(file => {
-    const contents = fs.readFileSync(blogPath + file, 'utf8');
-    posts.push(matter(contents));
+    // Get contents of markdown file
+    const contents = fs.readFileSync(blogPath + file, 'utf8')
+    // Parse markdown content + front-matter
+    const post = matter(contents)
+    // Replace date with unix timestamp
+    post.data.date = Date.parse(post.data.date)
+    // Set word count
+    post.data.wordCount = wordCount(post.content)
+    posts.push(post);
   });
+
   return posts;
 }
 

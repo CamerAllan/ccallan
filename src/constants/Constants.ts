@@ -6,3 +6,5 @@ export const SPACING = {
     LARGE: 3,
     EXTRA_LARGE: 5
 }
+
+export const WORDS_PER_MINUTE = 200
