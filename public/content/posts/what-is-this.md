@@ -1,7 +1,7 @@
 ---
 id: new-blog
 date: 8 Apr, 2020
-title: Gather around!
+title: Gather round!
 description: Woahh not too close though. Strange times call for strange measures - I've started a blog.
 live: true
 tags: [personal]
@@ -9,7 +9,7 @@ tags: [personal]
 
 > *'Maybe I should start a blog'*
 
-This was one of my first thoughts when I considered the prospect of indefinite self-isolation due to Covid-19. I've taken the time to think about why:
+This was one of my first thoughts when I considered the prospect of indefinite self-isolation due to COVID-19. I've taken the time to think about why:
 
 ### Reflection
 
@@ -17,11 +17,11 @@ We're all facing months of isolation - clearly mental wellbeing is going to be a
 
 ### Confidence
 
-I don't have to think about the way I speak - it just happens. Hopefully with practice, the same will happen for my writing. Developing a style I'm comfortable will let me focus on content over phrasing.
+I don't have to think about the way I speak - it just happens. Hopefully with practice, the same will happen for my writing. Developing a style I'm comfortable with will let me focus on content over phrasing.
 
 ### Accountability
 
-My theory here is that in keeping a publicly available log of my progress against longer term projects, I'll give myself another incentive to keep going - documenting my success becomes a reward.
+My theory here is that in keeping a publicly available log of my progress against longer-term projects, I'll give myself another incentive to keep going - documenting my success becomes a reward.
 
 ### Pleasure
 
