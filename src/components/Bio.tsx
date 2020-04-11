@@ -2,6 +2,7 @@ import React from 'react'
 import Avatar from './Avatar'
 import {  Link, Container, Typography } from '@material-ui/core'
 import PBox from './util/PBox'
+import { Link as ReachLink } from '@reach/router'
 
 interface BioProps {
     name: string;
@@ -15,7 +16,9 @@ const Bio: React.FC<BioProps> = (props) => {
     <Container >
       <Typography align='center'>
         <PBox size='large'>
-          <Avatar altText={props.name} src={props.imageSrc}/>
+          <ReachLink to='/'>
+            <Avatar altText={props.name} src={props.imageSrc}/>
+          </ReachLink>
           <PBox size='large'>
             <Typography variant='h4'>{props.name}</Typography>
           </PBox>
