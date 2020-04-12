@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import ReactGA from 'react-ga';
 
 // Your top level component
 import App from './App'
@@ -13,8 +12,6 @@ export default App
 
 // Render your app
 if (typeof document !== 'undefined') {
-  
-  ReactGA.initialize('UA-163465341-1');
   
   const target = document.getElementById('root')
 
