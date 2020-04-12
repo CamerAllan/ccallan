@@ -18,6 +18,7 @@
     "gray-matter": "^4.0.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-ga": "^2.7.0",
     "react-jss": "^8.0.0",
     "react-markdown": "^4.3.1",
     "react-static": "^7.2.3",

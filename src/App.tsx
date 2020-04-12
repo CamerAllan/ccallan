@@ -6,7 +6,6 @@ import Layout from 'components/Layout'
 function App() {
   return (
     <>
-      <header/>
       <Root>
         <body>
             <CssBaseline />
