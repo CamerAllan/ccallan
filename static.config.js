@@ -2,9 +2,18 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { createGenerateClassName } from '@material-ui/core/styles'
-// import { Post } from './types'
+import React from 'react'
 
-// Typescript support in static.config.js is not yet supported, but is coming in a future update!
+const gaScript = `<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163465341-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163465341-1');
+</script>
+`
 
 const generateClassName = createGenerateClassName()
 
@@ -51,6 +60,26 @@ export default {
         })),
       },
     ]
+  },
+  Document: class CustomHtml extends React.Component {
+    render() {
+      const { Html, Head, Body, children } = this.props
+      return (
+        <Html lang="de">
+          <Head>
+            <meta charSet="UTF-8" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1"
+            />
+            <title>Cameron Allan</title>
+            {/* Add google analytics goodies */}
+            <script dangerouslySetInnerHTML={{ __html: gaScript }} /> 
+          </Head>
+          <Body>{children}</Body>
+        </Html>
+      )
+    }
   },
   plugins: [
     [
