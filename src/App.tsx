@@ -12,7 +12,6 @@ function App() {
 
   return (
     <>
-      <header/>
       <Root>
         <body>
             <CssBaseline />
