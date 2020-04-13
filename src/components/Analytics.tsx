@@ -1,12 +1,12 @@
 import React from 'react';
 import { createHistory,LocationProvider }from "@reach/router";
 import ReactGA from "react-ga";
-import { DOMAIN } from '../constants/Constants';
+// import { DOMAIN } from '../constants/Constants';
 
 // Initialize google analytics goodies for content
 // Exclude hits on dev site
 
-const inProd = document.location.hostname.search(DOMAIN) !== -1
+const inProd = true;//document.location.hostname.search(DOMAIN) !== -1
 
 let history: any = null;
 
