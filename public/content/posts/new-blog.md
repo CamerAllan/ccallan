@@ -7,9 +7,11 @@ live: true
 tags: [personal]
 ---
 
-We're staring down the barrel of a long time indoors.
+![in no uncertain terms](/images/posts/new-blog/stay-home.jpg)
 
-This alone is a horrifying thought for some, before considering the dangers of COVID-19. I'm one of the lucky ones - my hobbies and interests (read: computers) lend themselves pretty well to staying indoors! I know others who'll wrestle with their personal quarantine far more than myself.
+We've all been told (in no uncertain terms) to stay home.
+
+This is a horrifying thought for some, even before considering the dangers of COVID-19. I'm one of the lucky ones - my hobbies and interests (read: computers) lend themselves pretty well to staying indoors! I know others who will wrestle with their personal quarantine far more than myself.
 
 Having said that, it seems wise to start doing something a bit different - not least to stop the days from blurring into each other.
 
@@ -17,7 +19,7 @@ Having said that, it seems wise to start doing something a bit different - not l
 
 > *'Maybe I should start a blog'*
 
-I've never been someone who writes for fun. Up until now, I've only taken the time to put pen to paper when it's been necessary - for coursework and exams. Given that all my writing so far has been under these circumstances, I thought I'd better give it another go.
+I've never been someone who writes for fun. Up until now, I've only taken the time to put pen to paper when it's been necessary - mainly coursework and exams. So it's maybe time to give it a go under more favorable circumstances.
 
 So, after thinking for a while I decided this might not be a horrendous idea, for a few reasons:
 
