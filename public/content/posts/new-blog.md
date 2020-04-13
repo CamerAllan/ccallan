@@ -7,41 +7,49 @@ live: true
 tags: [personal]
 ---
 
-
 We've all been told (in no uncertain terms) to stay home.
 
-![*no uncertain terms*](stay-home.jpg)
+![*aforementioned lack of uncertain terms*](stay-home.jpg)
 
 I know this is a horrifying thought for some, even before considering the dangers of COVID-19. Fortunately for me, my hobbies and interests (read: computers) lend themselves pretty well to staying indoors! I know others who will wrestle with their personal quarantine far more than myself.
 
-Having said that, it seems wise to start doing something a bit different - not least to stop the days from blurring into each other.
+Having said that, it seems wise to start doing something a bit different - not least to stop the days from blurring into one another.
 
-## So I got thinking
+## So I started thinking
 
 > *'Maybe I should start a blog'*
 
-I've never been someone who writes for fun. Up until now, I've only taken the time to put pen to paper when it's been necessary - mainly coursework and exams. So it's maybe time to give it a go under more favorable circumstances.
-
-So, after thinking for a while I decided this might not be a horrendous idea, for a few reasons:
+I've never been someone who writes for fun. Up until now, I've only taken the time to put pen to paper when it's been necessary - primarily for coursework and exams. So I thought it was time to give it a go under more favorable circumstances. I decided that starting a blog might *not* be a *horrendous* idea, for the following reasons:
 
 ### Accountability
 
-When it comes to starting a new project, I have a problem with persistence. As soon as I get to the point where I believe I could successfully bring something to completion, I lose interest. It's as though knowing I can do it is enough.
+My computer is home to dozens of unfinished projects. They generally go like this:
 
-I hope that if keep a public log of my progress on these projects, I'll be more likely to see them through.
+I spend days working feverishly on the exciting, core part of the problem - after which one of these two things happen:
 
-### Style
+1. 'Breakthrough! I can see the light at the end of the tunnel! I'll have this done in no time, all that's left is to implement the other, boring, 90% of the work...'
+2. 'I could probably figure this but it would take some considerable research, I'm sure I've seen a paper on how to do this somewhere...'
 
-I don't know about you, but I don't have to think about the way I speak - it just happens. Sadly I can't say the same for my writing. If all goes to plan, I'll develop a style I'm comfortable with, allowing me to focus on the *content* of these posts rather than their *phrasing*.
+Either way, a few days later I'll have moved onto the first 10% of something else. My hope with the blog is that by keeping a public log of my progress on these projects, I'll have more incentive to push through to the end.
+
+### Confidence
+
+I don't have to think about the way I speak. It just happens.
+
+Sadly I can't say the same for my writing. Writing takes me *ages*. It's taken me about as long to write this first post as it has to build the site it's hosted on.
+
+Given that I've made it this far, I'm confident that with practice I'll develop a style I'm comfortable with, allowing me to focus on the content of these posts rather than their phrasing.
 
 ### Reflection
 
-It has quickly become clear that looking after our mental wellbeing is going to be a key part of getting through this pandemic. Along this vein, I've always found that writing my thoughts down helps me to compartmentalize them. If there's a time to turn this bit of mental housekeeping into a habit, surely it's now!
+It has quickly become clear that looking after our mental wellbeing is going to be a key part of getting through this pandemic. Along this vein, I've always found that getting my thoughts onto paper helps me to compartmentalize them.
+
+From my experience so far, I can say with confidence that most of what I write down will not make it into a post - but that's ok. If there's a time to turn this bit of mental housekeeping into a habit, surely it's now!
 
 ## What's next
 
-It's taken me about as long to write this as it did to build the site it's hosted on - but I'm enjoying the process of reframing writing from being a chore to a hobby.
+So, that's a bit about what I'll be doing with my quarantine. I don't expect anyone to keep up with this, as it's more for myself than any particular audience, but it's here if you want it. For now I'm aiming to put out a couple of longer posts every month, maybe with some smaller bits and bobs in between.
 
-I hope I'll be able to get out a couple of longer posts every month, maybe with some smaller bits and bobs in between.
+That's it for now,
 
-See you next time!
+Stay inside, I'll see you next time!
