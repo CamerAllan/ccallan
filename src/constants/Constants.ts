@@ -8,3 +8,5 @@ export const SPACING = {
 }
 
 export const WORDS_PER_MINUTE = 200
+
+export const DOMAIN = 'ccallan.dev'

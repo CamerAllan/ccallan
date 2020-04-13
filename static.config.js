@@ -4,17 +4,6 @@ import matter from 'gray-matter'
 import { createGenerateClassName } from '@material-ui/core/styles'
 import React from 'react'
 
-const gaScript = `<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163465341-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-163465341-1');
-</script>
-`
-
 const generateClassName = createGenerateClassName()
 
 const blogPath = 'public/content/posts/';
@@ -73,8 +62,6 @@ export default {
               content="width=device-width, initial-scale=1"
             />
             <title>Cameron Allan</title>
-            {/* Add google analytics goodies */}
-            <script dangerouslySetInnerHTML={{ __html: gaScript }} /> 
           </Head>
           <Body>{children}</Body>
         </Html>
