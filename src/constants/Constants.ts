@@ -9,4 +9,6 @@ export const SPACING = {
 
 export const WORDS_PER_MINUTE = 200
 
-export const DOMAIN = 'ccallan.dev'
+export const HOSTNAME = 'ccallan.dev'
+
+export const TRACKING_ID = 'UA-163465341-1'

@@ -50,24 +50,6 @@ export default {
       },
     ]
   },
-  Document: class CustomHtml extends React.Component {
-    render() {
-      const { Html, Head, Body, children } = this.props
-      return (
-        <Html lang="de">
-          <Head>
-            <meta charSet="UTF-8" />
-            <meta
-              name="viewport"
-              content="width=device-width, initial-scale=1"
-            />
-            <title>Cameron Allan</title>
-          </Head>
-          <Body>{children}</Body>
-        </Html>
-      )
-    }
-  },
   plugins: [
     [
       'react-static-plugin-jss',

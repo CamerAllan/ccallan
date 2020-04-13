@@ -1,17 +1,17 @@
 import React from 'react';
 import { createHistory,LocationProvider }from "@reach/router";
 import ReactGA from "react-ga";
-// import { DOMAIN } from '../constants/Constants';
+import { TRACKING_ID, HOSTNAME } from '../constants/Constants';
 
 // Initialize google analytics goodies for content
 // Exclude hits on dev site
 
-const inProd = true;//document.location.hostname.search(DOMAIN) !== -1
+const inProd = document.location.hostname.search(HOSTNAME) !== -1
 
 let history: any = null;
 
 if (inProd) {
-    ReactGA.initialize("UA-163465341-1");
+    ReactGA.initialize(TRACKING_ID);
     history = createHistory(window as any);
     history.listen( (window: any) => {
         ReactGA.pageview(window.location.pathname + window.location.search);
