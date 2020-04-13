@@ -6,7 +6,7 @@ import { TRACKING_ID, HOSTNAME } from '../constants/Constants';
 // Initialize google analytics goodies for content
 // Exclude hits on dev site
 
-const inProd = window && document.location.hostname.search(HOSTNAME) !== -1
+const inProd = typeof window !== 'undefined' && document.location.hostname.search(HOSTNAME) !== -1
 
 let history: any = null;
 
