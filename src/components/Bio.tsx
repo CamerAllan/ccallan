@@ -14,7 +14,7 @@ const Bio: React.FC<BioProps> = (props) => {
   return (
     
     <Container >
-      <Typography align='center'>
+      <Typography align='center' component='span'>
         <PBox size='large'>
           <ReachLink to='/'>
             <Avatar altText={props.name} src={props.imageSrc}/>

@@ -1,4 +1,7 @@
+export const XS = 'xs';
 export const SM = 'sm';
+export const MD = 'md';
+
 
 export const SPACING = {
     SMALL: 1,

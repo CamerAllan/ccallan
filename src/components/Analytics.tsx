@@ -21,10 +21,9 @@ if (inProd) {
 
 const Analytics: React.FC<any> = (props) => {
 
-    const dev = props.children
-    const prod = <LocationProvider history={history} >{dev}</LocationProvider>
-
-    return inProd ? prod : dev
+    return inProd ? 
+    <LocationProvider history={history} >{props.children}</LocationProvider> : 
+    props.children
 
 }
 

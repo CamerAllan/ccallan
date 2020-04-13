@@ -14,7 +14,7 @@ export default () => {
 
   return (
   <Container className={classes.root}>
-    <Typography align='center'>
+    <Typography align='center' component='div'>
         <h1>
             This site is under construction!
         </h1>
