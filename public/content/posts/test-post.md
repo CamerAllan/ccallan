@@ -9,7 +9,7 @@ tags: [tech]
 
 # Hello!
 
-This is my first post on this site. 
+This is my first post on this site.
 
 I'll be using this as a baseline for development, so it might grow to allow me to try out different features.
 

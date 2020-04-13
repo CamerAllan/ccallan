@@ -7,11 +7,12 @@ live: true
 tags: [personal]
 ---
 
-![in no uncertain terms](/images/posts/new-blog/stay-home.jpg)
 
 We've all been told (in no uncertain terms) to stay home.
 
-This is a horrifying thought for some, even before considering the dangers of COVID-19. I'm one of the lucky ones - my hobbies and interests (read: computers) lend themselves pretty well to staying indoors! I know others who will wrestle with their personal quarantine far more than myself.
+![*no uncertain terms*](stay-home.jpg)
+
+I know this is a horrifying thought for some, even before considering the dangers of COVID-19. Fortunately for me, my hobbies and interests (read: computers) lend themselves pretty well to staying indoors! I know others who will wrestle with their personal quarantine far more than myself.
 
 Having said that, it seems wise to start doing something a bit different - not least to stop the days from blurring into each other.
 
