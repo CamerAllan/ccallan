@@ -2,13 +2,17 @@ import React from 'react'
 import { useRouteData } from 'react-static'
 import ReactMarkdown from 'react-markdown'
 import ColorLink from 'components/util/Link'
-import { makeStyles } from '@material-ui/core'
+import { makeStyles, Theme } from '@material-ui/core'
+import { SPACING } from '../constants/Constants'
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme: Theme) => ({
   image: {
     display: 'block',
     margin: '0 auto',
     maxWidth: '95%'
+  },
+  para: {
+    margin: theme.spacing(SPACING.SMALL)
   }
 }))
 
@@ -18,6 +22,10 @@ export default () => {
 
   const imageRenderer = (props: any) => {
     return <img className={classes.image} {...props} />
+  }
+
+  const paragraphRenderer = (props: any) => {
+    return <p className={classes.para} {...props} />
   }
 
   return (
@@ -30,7 +38,7 @@ export default () => {
         <ReactMarkdown 
           transformImageUri={(imageName) => `/images/posts/${post.data.id}/${imageName}`} 
           source={post.content} 
-          renderers={{image: imageRenderer}}/>
+          renderers={{image: imageRenderer, paragraph: paragraphRenderer}}/>
       </div>
     </>
   )
