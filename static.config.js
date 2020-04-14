@@ -62,6 +62,8 @@ export default {
               content="width=device-width, initial-scale=1"
             />
             <title>Cameron Allan</title>
+
+            {/* Favicon business */}
             <link rel="apple-touch-icon" sizes="57x57" href="/public/favicon/apple-icon-57x57.png"/>
             <link rel="apple-touch-icon" sizes="60x60" href="/public/favicon/apple-icon-60x60.png"/>
             <link rel="apple-touch-icon" sizes="72x72" href="/public/favicon/apple-icon-72x72.png"/>
@@ -78,7 +80,8 @@ export default {
             <link rel="manifest" href="/manifest.json"/>
             <meta name="msapplication-TileColor" content="#ffffff"/>
             <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"/>
-            <meta name="theme-color" content="#ffffff"></meta>
+
+            <meta name="theme-color" content='#031926' />
           </Head>
           <Body>{children}</Body>
         </Html>
