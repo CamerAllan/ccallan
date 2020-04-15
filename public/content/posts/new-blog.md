@@ -34,7 +34,7 @@ They generally go like this:
 I spend days working feverishly on the exciting, core part of the problem - after which one of these two things happen:
 
 1. 'Breakthrough! I can see the light at the end of the tunnel! I'll have this done in no time, all that's left is to implement the other, boring, 90% of the work...'
-2. 'I could probably figure this but it would take some considerable research, I'm sure I've seen a paper on how to do this somewhere...'
+2. 'I could probably figure this out but it would take some considerable research, I'm sure I've seen a paper on how to do this somewhere...'
 
 Either way, a few days later I'll have moved onto the first 10% of something else.
 My hope with the blog is that by keeping a public log of my progress on these projects, I'll have more incentive to push through to the end.
