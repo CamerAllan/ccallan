@@ -17,12 +17,12 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-interface PBoxProps {
+interface PaddedBoxProps {
     size?: string;
     className?: string;
 }
 
-const PBox: React.FC<BoxProps & PBoxProps> = (props) => {
+const PaddedBox: React.FC<BoxProps & PaddedBoxProps> = (props) => {
 
     const classes = useStyles();
 
@@ -39,5 +39,5 @@ const PBox: React.FC<BoxProps & PBoxProps> = (props) => {
     )
 }
 
-export default PBox
+export default PaddedBox
 

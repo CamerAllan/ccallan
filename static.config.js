@@ -42,7 +42,7 @@ export default {
         }),
         children: posts.map((post) => ({
           path: `/post/${post.data.id}`,
-          template: 'src/containers/Post',
+          template: 'src/components/Post',
           getData: () => ({
             post,
           }),

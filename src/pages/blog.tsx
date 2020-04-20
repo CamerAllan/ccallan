@@ -2,7 +2,7 @@ import React from 'react'
 import { useRouteData } from 'react-static'
 import { PostData } from 'types'
 import PostCard from 'components/PostCard'
-import PBox from 'components/util/PBox'
+import PaddedBox from 'components/util/PaddedBox'
 import { Divider, Box } from '@material-ui/core'
 
 export default () => {
@@ -14,15 +14,15 @@ export default () => {
   return (
     <div>
       <h1>Posts</h1>
-      <Divider/>
+      <Divider />
       {posts.map(postData => (
-        !postData.live ? null : 
-        <Box>
-          <PBox>
-            <PostCard postData={postData}/>
-          </PBox>
-          <Divider/>
-        </Box>
+        !postData.live ? null :
+          <Box>
+            <PaddedBox>
+              <PostCard postData={postData} />
+            </PaddedBox>
+            <Divider />
+          </Box>
       ))}
     </div>
   )
