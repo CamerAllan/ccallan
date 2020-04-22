@@ -1,8 +1,9 @@
 import React from 'react'
 import Avatar from './Avatar'
-import { Link, Container, Typography } from '@material-ui/core'
+import { Container, Typography } from '@material-ui/core'
 import PaddedBox from './util/PaddedBox'
 import { Link as ReachLink } from '@reach/router'
+import ColorLink from './util/Link'
 
 interface BioProps {
   name: string;
@@ -22,7 +23,7 @@ const Bio: React.FC<BioProps> = (props) => {
           <PaddedBox size='large'>
             <Typography variant='h4'>{props.name}</Typography>
           </PaddedBox>
-          <Typography variant='body1'>Hi! I'm a software engineer working at <Link href='https://www.dunnhumby.com/'>dunnhumby</Link>. Currently experimenting with little projects in Unity.</Typography>
+          <Typography variant='body1'>Hi! I'm a software engineer working at <ColorLink to='https://www.dunnhumby.com/'>dunnhumby</ColorLink>. Currently experimenting with little projects in Unity.</Typography>
         </PaddedBox>
       </Typography>
     </Container>

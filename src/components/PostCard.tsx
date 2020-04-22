@@ -34,7 +34,7 @@ const PostCard: React.FC<PostCardProps> = (props) => {
 
     const formatDate = (unixTimestamp: number) => {
         const dtf = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' })
-        const [{ value: mo },,{ value: da },,{ value: ye }] = dtf.formatToParts(unixTimestamp) 
+        const [{ value: mo }, , { value: da }, , { value: ye }] = dtf.formatToParts(unixTimestamp)
         return `${da} ${mo}, ${ye}`
     }
 
@@ -46,23 +46,23 @@ const PostCard: React.FC<PostCardProps> = (props) => {
                 <Typography gutterBottom variant="h5">
                     {title} {tagComponent}
                 </Typography>
-                <Typography gutterBottom variant="body2" color="textSecondary" component="p">
+                <Typography gutterBottom variant="body2" component="p">
                     {description}
                 </Typography>
                 <Box>
-                    <EventIcon className={iconClasses.icon} fontSize='inherit'/>
-                    <Typography display='inline' className={classes.date} variant="body2" color="textSecondary" component="p">
+                    <EventIcon className={iconClasses.icon} fontSize='inherit' />
+                    <Typography display='inline' className={classes.date} variant="body2" component="p">
                         {formatDate(date)}
                     </Typography>
                 </Box>
                 <Box>
-                    <TimerIcon className={iconClasses.icon} fontSize='inherit'/> 
-                    <Typography display='inline' className={classes.date} variant="body2" color="textSecondary" component="p">
+                    <TimerIcon className={iconClasses.icon} fontSize='inherit' />
+                    <Typography display='inline' className={classes.date} variant="body2" component="p">
                         {`${readTimeMins} minutes`}
                     </Typography>
                 </Box>
                 <Box>
-                    
+
                 </Box>
             </ColorLink>
         </Box>

@@ -18,7 +18,7 @@ const ColorLink: React.FC<LinkProps> = (props) => {
     const classes = useStyles();
 
     return (
-    <Link className={classes.root} to={props.to}>{props.children}</Link>
+        <Link className={classes.root} to={props.to}>{props.children}</Link>
     )
 };
 

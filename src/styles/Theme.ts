@@ -1,23 +1,29 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
+const dark = '#25323A'
+const medium = '#89AFA9'
+const light = '#CFD2CD'
+
 export default createMuiTheme({
   palette: {
-    type: 'dark',
+    type: 'light',
     text: {
-      primary: '#eaebed'
+      primary: dark,
+      secondary: '#ffffff'
     },
     primary: {
-      // light: will be calculated from palette.primary.main,
-      main: '#d64933',
+      main: medium,
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
     },
     secondary: {
-      main: '#031926',
+      main: dark,
     },
-    
+    info: {
+      main: light
+    },
     background: {
-      default: "#30434f"
+      default: light
     },
     // Used by `getContrastText()` to maximize the contrast between
     // the background and the text.
