@@ -82,7 +82,7 @@ export default {
   },
   plugins: [
     [
-      'react-static-plugin-jss',
+      require.resolve('react-static-plugin-jss'),
       {
         providerProps: {
           generateClassName,
