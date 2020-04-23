@@ -4,31 +4,29 @@ import { AppContainer } from 'react-hot-loader'
 
 // Your top level component
 import App from './App'
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core'
-const Theme = require('./theme')
+import { ThemeProvider } from '@material-ui/core'
+import Theme from './theme'
 
 // Export your top level component as JSX (for static rendering)
 export default App
 
 // Render your app
 if (typeof document !== 'undefined') {
-  
+
   const target = document.getElementById('root')
 
   const renderMethod = target.hasChildNodes()
     ? ReactDOM.hydrate
     : ReactDOM.render
 
-  const muiTheme = createMuiTheme(Theme)
-
 
   const render = (Comp: Function) => {
     renderMethod(
-      <MuiThemeProvider theme={muiTheme} >
+      <ThemeProvider theme={Theme} >
         <AppContainer>
           <Comp />
         </AppContainer>
-      </MuiThemeProvider>,
+      </ThemeProvider>,
       target
     )
   }
