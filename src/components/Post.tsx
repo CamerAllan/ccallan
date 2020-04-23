@@ -35,10 +35,10 @@ export default () => {
         <h1>
           {post.data.title}
         </h1>
-        <ReactMarkdown 
-          transformImageUri={(imageName) => `/images/posts/${post.data.id}/${imageName}`} 
-          source={post.content} 
-          renderers={{image: imageRenderer, paragraph: paragraphRenderer}}/>
+        <ReactMarkdown
+          transformImageUri={(imageName) => `/images/posts/${post.data.id}/${imageName}?nf_resize=fit&w=960&h=540`}
+          source={post.content}
+          renderers={{ image: imageRenderer, paragraph: paragraphRenderer }} />
       </div>
     </>
   )
