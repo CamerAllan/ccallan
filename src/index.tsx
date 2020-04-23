@@ -5,7 +5,7 @@ import { AppContainer } from 'react-hot-loader'
 // Your top level component
 import App from './App'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core'
-import Theme from './styles/Theme'
+const Theme = require('./theme')
 
 // Export your top level component as JSX (for static rendering)
 export default App

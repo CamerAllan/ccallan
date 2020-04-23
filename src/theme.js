@@ -1,10 +1,9 @@
-import { createMuiTheme } from '@material-ui/core/styles';
 
 const dark = '#25323A'
 const medium = '#89AFA9'
 const light = '#CFD2CD'
 
-export default createMuiTheme({
+export default {
   palette: {
     type: 'light',
     text: {
@@ -42,4 +41,4 @@ export default createMuiTheme({
       xl: 1920
     }
   }
-});
+};
