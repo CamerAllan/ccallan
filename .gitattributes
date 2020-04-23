@@ -1,1 +1,7 @@
 public/images/**
+public/images/pp4.jpg filter=lfs diff=lfs merge=lfs -text
+public/images/posts filter=lfs diff=lfs merge=lfs -text
+public/images/pp.jpg filter=lfs diff=lfs merge=lfs -text
+public/images/pp1.jpg filter=lfs diff=lfs merge=lfs -text
+public/images/pp2.jpg filter=lfs diff=lfs merge=lfs -text
+public/images/pp3.jpg filter=lfs diff=lfs merge=lfs -text
