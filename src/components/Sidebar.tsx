@@ -25,7 +25,7 @@ export default () => {
     return (
         <Typography color='textSecondary'>
             <Box className={classes.root}>
-                <Bio name='Cameron Allan' imageSrc='/images/pp4.jpg?nf_resize=fit&w=300&h=400' />
+                <Bio name='Cameron Allan' imageSrc='/images/pp4.jpg?nf_resize=fit&w=400&h=400' />
                 <Navigation />
                 <Social />
             </Box>

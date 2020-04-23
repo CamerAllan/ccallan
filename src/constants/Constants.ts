@@ -15,3 +15,8 @@ export const WORDS_PER_MINUTE = 200
 export const HOSTNAME = 'ccallan.dev'
 
 export const TRACKING_ID = 'UA-163465341-1'
+
+export const IMAGE_DIMENSIONS = {
+    WIDTH: 960,
+    HEIGHT: 540
+}

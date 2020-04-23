@@ -3,7 +3,7 @@ import { useRouteData } from 'react-static'
 import ReactMarkdown from 'react-markdown'
 import ColorLink from 'components/util/Link'
 import { makeStyles, Theme } from '@material-ui/core'
-import { SPACING } from '../constants/Constants'
+import { SPACING, IMAGE_DIMENSIONS } from '../constants/Constants'
 
 const useStyles = makeStyles((theme: Theme) => ({
   image: {
@@ -36,7 +36,7 @@ export default () => {
           {post.data.title}
         </h1>
         <ReactMarkdown
-          transformImageUri={(imageName) => `/images/posts/${post.data.id}/${imageName}?nf_resize=fit&w=960&h=540`}
+          transformImageUri={(imageName) => `/images/posts/${post.data.id}/${imageName}?nf_resize=smartcrop&w=${IMAGE_DIMENSIONS.WIDTH}&h=${IMAGE_DIMENSIONS.HEIGHT}`}
           source={post.content}
           renderers={{ image: imageRenderer, paragraph: paragraphRenderer }} />
       </div>
