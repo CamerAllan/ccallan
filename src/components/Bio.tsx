@@ -23,7 +23,7 @@ const Bio: React.FC<BioProps> = (props) => {
           <PaddedBox size='large'>
             <Typography variant='h4'>{props.name}</Typography>
           </PaddedBox>
-          <Typography variant='body1'>Hi! I'm a software engineer working at <ColorLink to='https://www.dunnhumby.com/'>dunnhumby</ColorLink>. Currently experimenting with little projects in Unity.</Typography>
+          <Typography variant='body1'>Hi! This is where I keep my thoughts. Currently there's just a <ColorLink to='/blog'>blog</ColorLink>, but I plan for this site to be a freeform wiki of notes and ideas. </Typography>
         </PaddedBox>
       </Typography>
     </Container>
