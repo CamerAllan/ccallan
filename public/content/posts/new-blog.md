@@ -4,7 +4,6 @@ date: 4/8/20
 title: Typing from home
 description: If you can't get out of your house, get out of your comfort zone - I've started a blog.
 live: true
-tags: [personal]
 ---
 
 ![*certain terms*](stay-home.jpg)

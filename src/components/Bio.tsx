@@ -1,5 +1,5 @@
 import React from 'react'
-import Avatar from './Avatar'
+import Pic from './Pic'
 import { Container, Typography } from '@material-ui/core'
 import PaddedBox from './util/PaddedBox'
 import { Link as ReachLink } from '@reach/router'
@@ -18,7 +18,7 @@ const Bio: React.FC<BioProps> = (props) => {
       <Typography align='center' component='span'>
         <PaddedBox size='large'>
           <ReachLink to='/'>
-            <Avatar altText={props.name} src={props.imageSrc} />
+            <Pic altText={props.name} src={props.imageSrc} />
           </ReachLink>
           <PaddedBox size='large'>
             <Typography variant='h4'>{props.name}</Typography>

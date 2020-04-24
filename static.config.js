@@ -1,39 +1,61 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-// import { Post } from './types'
 
-// Typescript support in static.config.js is not yet supported, but is coming in a future update!
+const contentPath = 'public/content';
 
-const blogPath = 'public/content/posts/';
+const getFolders = () => {
 
-const getPosts = () => {
-  const posts = []
-  
-  fs.readdirSync(blogPath).forEach(file => {
-    const contents = fs.readFileSync(blogPath + file, 'utf8');
-    posts.push(matter(contents));
+  const folders = [] //: Folder[]
+  fs.readdirSync(contentPath).forEach(folderName => {
+    let folder = {} //: Folder
+    folder.items = []
+    fs.readdirSync(`${contentPath}/${folderName}`).forEach(fileName => {
+      const file = fs.readFileSync(`${contentPath}/${folderName}/${fileName}`, 'utf8');
+      const fileMatter = matter(file)
+      const fileContents = fileMatter.content
+      const fileData = fileMatter.data
+      if (fileName == 'index.md') {
+        folder = {
+          ...folder,
+          ...fileData,
+          id: folderName,
+          description: fileContents,
+        }
+      } else {
+        const item = {
+          ...fileData,
+          contents: fileContents
+        }
+        folder.items.push(item);
+      }
+    })
+
+    // Only add folder if it has correctly formed index
+    if (folder.title) {
+      folders.push(folder)
+    } else {
+      console.error(`Missing/Invalid index for folder: ${fileName}`)
+    }
   });
-  return posts;
+
+  return folders;
 }
 
 export default {
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getRoutes: async () => {
-    const posts = getPosts()
     return [
       {
-        path: '/blog',
-        getData: () => ({
-          posts: posts.map(post => post.data),
-        }),
-        children: posts.map((post) => ({
-          path: `/post/${post.data.id}`,
-          template: 'src/components/Post',
-          getData: () => ({
-            post,
-          }),
-        })),
+        path: '/wiki/',
+        getData: () => ({ folders: getFolders() }),
+        // children: folders.map((folder) => ({
+        //   path: `/${folder.id}`,
+        //   template: 'src/components/Post',
+        //   getData: () => ({
+        //     post,
+        //   }),
+        // })),
       },
     ]
   },
@@ -49,3 +71,4 @@ export default {
     require.resolve('react-static-plugin-sitemap'),
   ],
 }
+

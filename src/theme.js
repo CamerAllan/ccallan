@@ -24,6 +24,7 @@ export const theme = createMuiTheme({
       main: light
     },
     background: {
+      paper: dark,
       default: light
     },
     // Used by `getContrastText()` to maximize the contrast between
