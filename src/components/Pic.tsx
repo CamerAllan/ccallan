@@ -15,7 +15,7 @@ interface IconProps {
     src: string;
 }
 
-const Avatar: React.FC<IconProps> = (props) => {
+const Pic: React.FC<IconProps> = (props) => {
 
     const classes = useStyles();
 
@@ -23,4 +23,4 @@ const Avatar: React.FC<IconProps> = (props) => {
         <AvatarCore className={classes.root} alt={props.altText} src={props.src} variant='circle' />
     )
 }
-export default Avatar
+export default Pic

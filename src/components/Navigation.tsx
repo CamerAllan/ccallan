@@ -20,10 +20,10 @@ const Navigation: React.FC = () => {
 
     const a11yProps = (index: any) => {
         return {
-          id: `vertical-tab-${index}`,
-          'aria-controls': `vertical-tabpanel-${index}`,
+            id: `vertical-tab-${index}`,
+            'aria-controls': `vertical-tabpanel-${index}`,
         };
-      }
+    }
 
     const handleChange = (_event: React.ChangeEvent<{}>, newValue: number) => {
         setValue(newValue);
@@ -43,8 +43,7 @@ const Navigation: React.FC = () => {
                 value={value}
             >
                 <Tab component={Link} {...a11yProps(0)} label="About Me" to="/about" />
-                <Tab component={Link} {...a11yProps(1)} label="Blog" to="/blog" />
-                <Tab component={Link} {...a11yProps(2)} label="Projects" to="/projects" />
+                <Tab component={Link} {...a11yProps(1)} label="My stuff" to="/wiki" />
             </Tabs>
         </>
     )
