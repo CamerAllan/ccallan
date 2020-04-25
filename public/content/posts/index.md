@@ -1,7 +1,7 @@
 ---
-title: 'Blog Posts'
+title: 'Blog'
 icon: 'Subject'
 live: true
 ---
 
-Blog posts.
+My blog posts.

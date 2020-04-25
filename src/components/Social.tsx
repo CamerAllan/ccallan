@@ -1,6 +1,7 @@
 import React from 'react'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import AlternateEmailOutlinedIcon from '@material-ui/icons/AlternateEmailOutlined';
 import PaddedBox from './util/PaddedBox';
 import { SPACING } from '../constants/Constants';
 import { makeStyles, Box, Link } from '@material-ui/core';
@@ -26,6 +27,11 @@ const Social: React.FC = () => {
             <Link href="https://www.linkedin.com/in/cameroncraigallan/">
                 <Box component='span' className={classes.social}>
                     <LinkedInIcon fontSize='large' color='primary' />
+                </Box>
+            </Link>
+            <Link href="mailto:cameronallandev@gmail.com">
+                <Box component='span' className={classes.social}>
+                    <AlternateEmailOutlinedIcon fontSize='large' color='primary' />
                 </Box>
             </Link>
         </PaddedBox>

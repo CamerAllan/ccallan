@@ -25,9 +25,11 @@ const getFolders = () => {
       } else {
         const item = {
           ...fileData,
-          contents: fileContents
+          content: fileContents
         }
-        folder.items.push(item);
+        if (item.live) {
+          folder.items.push(item);
+        }
       }
     })
 
@@ -45,17 +47,26 @@ const getFolders = () => {
 export default {
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getRoutes: async () => {
+    const folders = getFolders()
     return [
       {
-        path: '/wiki/',
-        getData: () => ({ folders: getFolders() }),
-        // children: folders.map((folder) => ({
-        //   path: `/${folder.id}`,
-        //   template: 'src/components/Post',
-        //   getData: () => ({
-        //     post,
-        //   }),
-        // })),
+        path: '/bits-and-bobs/',
+        getData: () => ({ folders }),
+        children: folders.map((folder) => ({
+          path: `/${folder.id}`,
+          template: 'src/components/Folder',
+          getData: () => ({
+            folder,
+          }),
+          children: folder.items.map(item => ({
+            path: `/${item.id}`,
+            template: 'src/components/Item',
+            getData: () => ({
+              item,
+              containingFolder: folder.id
+            })
+          })),
+        })),
       },
     ]
   },

@@ -6,7 +6,7 @@ description: This is my first post, which I'll be using as a reference as I work
 live: false
 ---
 
-# Hello!
+# Hello
 
 This is my first post on this site.
 
@@ -26,7 +26,6 @@ I'm using [react-static](https://github.com/react-static/react-static) - a *stat
 
 I'm writing these posts in markdown, then having react-static scoop them up during the build process and hook them up to routes. In doing this I discovered [gray-matter](https://github.com/jonschlinkert/gray-matter), a simple library that parses attributes defined in the markdown.
 
-## That all sounds great, but why do I see flickers of odd stuff when navigating this site?
+## That all sounds great, but why do I see flickers of odd stuff when navigating this site
 
-I am styling my application using *css-in-js*. react-static is not currently looking for this, so it doesn't know to create any static css files. This leaves us with unstyled html. So what you're really seeing is react-static *not-so-slyly* swapping in the full js app. 
-
+I am styling my application using *css-in-js*. react-static is not currently looking for this, so it doesn't know to create any static css files. This leaves us with unstyled html. So what you're really seeing is react-static *not-so-slyly* swapping in the full js app.
