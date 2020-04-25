@@ -1,9 +1,10 @@
 import React from 'react'
 import { useRouteData } from 'react-static'
 import ReactMarkdown from 'react-markdown'
-import ColorLink from 'components/util/Link'
+import { ColorLinkInternal } from 'components/util/Link'
 import { makeStyles, Theme } from '@material-ui/core'
 import { SPACING, IMAGE_DIMENSIONS } from '../constants/Constants'
+import { Item } from 'types/index'
 
 const useStyles = makeStyles((theme: Theme) => ({
   image: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 export default () => {
-  const { post }: { post: any } = useRouteData()
+  const { item, containingFolder }: { item: Item, containingFolder: string } = useRouteData()
   const classes = useStyles();
 
   const imageRenderer = (props: any) => {
@@ -31,13 +32,13 @@ export default () => {
   return (
     <>
       <div>
-        <ColorLink to="/blog/">{'<'} Back</ColorLink>
+        <ColorLinkInternal to={`/bits-and-bobs/${containingFolder}`}>{'<'} Back</ColorLinkInternal>
         <h1>
-          {post.data.title}
+          {item.title}
         </h1>
         <ReactMarkdown
-          transformImageUri={(imageName) => `/images/posts/${post.data.id}/${imageName}?nf_resize=smartcrop&w=${IMAGE_DIMENSIONS.WIDTH}&h=${IMAGE_DIMENSIONS.HEIGHT}`}
-          source={post.content}
+          transformImageUri={(imageName) => `/images/${containingFolder}/${item.id}/${imageName}?nf_resize=smartcrop&w=${IMAGE_DIMENSIONS.WIDTH}&h=${IMAGE_DIMENSIONS.HEIGHT}`}
+          source={item.content}
           renderers={{ image: imageRenderer, paragraph: paragraphRenderer }} />
       </div>
     </>

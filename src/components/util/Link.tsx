@@ -1,6 +1,6 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core";
-import { Link } from "@reach/router";
+import { makeStyles, Link as CoreLink } from "@material-ui/core";
+import { Link as ReachLink } from "@reach/router";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -13,13 +13,20 @@ export interface LinkProps {
     to: string
 }
 
-const ColorLink: React.FC<LinkProps> = (props) => {
+export const ColorLinkExternal: React.FC<LinkProps> = (props) => {
 
     const classes = useStyles();
 
     return (
-        <Link className={classes.root} to={props.to}>{props.children}</Link>
+        <CoreLink className={classes.root} href={props.to} target="_blank">{props.children}</CoreLink>
     )
 };
 
-export default ColorLink;
+export const ColorLinkInternal: React.FC<LinkProps> = (props) => {
+
+    const classes = useStyles();
+
+    return (
+        <ReachLink className={classes.root} {...props}>{props.children}</ReachLink>
+    )
+};

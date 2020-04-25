@@ -42,8 +42,9 @@ const Navigation: React.FC = () => {
                 centered
                 value={value}
             >
-                <Tab component={Link} {...a11yProps(0)} label="About Me" to="/about" />
-                <Tab component={Link} {...a11yProps(1)} label="My stuff" to="/wiki" />
+                <Tab component={Link} {...a11yProps(0)} label="About Me" to="/" />
+                <Tab component={Link} {...a11yProps(0)} label="Blog" to="/bits-and-bobs/posts" />
+                <Tab component={Link} {...a11yProps(1)} label="Bits & Bobs" to="/bits-and-bobs" />
             </Tabs>
         </>
     )

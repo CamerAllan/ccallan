@@ -3,7 +3,6 @@ import Pic from './Pic'
 import { Container, Typography } from '@material-ui/core'
 import PaddedBox from './util/PaddedBox'
 import { Link as ReachLink } from '@reach/router'
-import ColorLink from './util/Link'
 
 interface BioProps {
   name: string;
@@ -23,7 +22,7 @@ const Bio: React.FC<BioProps> = (props) => {
           <PaddedBox size='large'>
             <Typography variant='h4'>{props.name}</Typography>
           </PaddedBox>
-          <Typography variant='body1'>Hi! This is where I keep my thoughts. Currently there's just a <ColorLink to='/blog'>blog</ColorLink>, but I plan for this site to be a freeform wiki of notes and ideas. </Typography>
+          <Typography variant='body1'>Hi! This is where I keep my thoughts. </Typography>
         </PaddedBox>
       </Typography>
     </Container>

@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Card, makeStyles, Typography, CardContent } from "@material-ui/core";
-import ColorLink from "./util/Link";
-// import { SPACING } from "../constants/Constants";
+import { ColorLinkInternal } from "./util/Link";
 import { MaterialIcon } from "../util/MaterialIcon"
 import { Item } from "types/index";
 
@@ -10,11 +9,10 @@ const useStyles = makeStyles(() => ({
         display: 'flex',
         flexFlow: 'row wrap'
     },
-    content: {
+    left: {
         flex: '1 0 auto'
     },
-    media: {
-        width: 50,
+    right: {
     }
 }))
 
@@ -29,46 +27,32 @@ export interface FolderProps {
 
 const FolderCard: React.FC<FolderProps> = (props) => {
 
-    const { id, title, icon } = props;
+    const { id, title, icon, items } = props;
     const classes = useStyles();
+
+    const countText = items.length == 1 ? 'item' : 'items'
+
     return (
         <Box >
-            <ColorLink to={`/wiki/${id}/`}>
-                <Card className={classes.root} >
-                    <CardContent className={classes.content}>
-                        <Typography color='primary' component="h5" variant="h5">{MaterialIcon({ icon })}{title}</Typography>
+            <ColorLinkInternal to={`/bits-and-bobs/${id}/`}>
+                <Card variant='outlined'>
+                    <CardContent className={classes.root}>
+                        <Box className={classes.left}>
+                            <Typography gutterBottom color='primary' component="h5" variant="h5">
+                                {MaterialIcon({ icon })}
+                            </Typography>
+                            <Typography color='primary' component="h5" variant="h5">
+                                {title}
+                            </Typography>
+                        </Box>
+                        <Box className={classes.right}>
+                            <Typography color='primary' align='right'><b>{`${items.length} ${countText}`}</b></Typography>
+                        </Box>
                     </CardContent>
                 </Card>
-            </ColorLink>
+            </ColorLinkInternal>
         </Box>
     )
-    // return (
-    //     <Box>
-    //         <ColorLink to={`/blog/post/${id}/`}>
-    //             <Typography gutterBottom variant="h5">
-    //                 {title} {tagComponent}
-    //             </Typography>
-    //             <Typography gutterBottom variant="body2" component="p">
-    //                 {description}
-    //             </Typography>
-    //             <Box>
-    //                 <EventIcon className={iconClasses.icon} fontSize='inherit' />
-    //                 <Typography display='inline' className={classes.date} variant="body2" component="p">
-    //                     {formatDate(date)}
-    //                 </Typography>
-    //             </Box>
-    //             <Box>
-    //                 <TimerIcon className={iconClasses.icon} fontSize='inherit' />
-    //                 <Typography display='inline' className={classes.date} variant="body2" component="p">
-    //                     {`${readTimeMins} minutes`}
-    //                 </Typography>
-    //             </Box>
-    //             <Box>
-
-    //             </Box>
-    //         </ColorLink>
-    //     </Box>
-    // )
 };
 
 export default FolderCard;

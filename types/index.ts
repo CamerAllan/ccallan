@@ -6,4 +6,14 @@ export interface Item {
   live: boolean
   wordCount: number
   content: string
+  containingFolder: string
+}
+
+export interface Folder {
+  id: string
+  title: string
+  description: string
+  icon: string
+  live: boolean
+  items: Item[]
 }
