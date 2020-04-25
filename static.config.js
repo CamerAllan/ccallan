@@ -25,6 +25,7 @@ const getFolders = () => {
       } else {
         const item = {
           ...fileData,
+          id: fileName.slice(0, -3), // Trim '.md'
           content: fileContents
         }
         if (item.live) {

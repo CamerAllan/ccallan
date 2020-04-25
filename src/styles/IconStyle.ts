@@ -1,10 +1,9 @@
 import { makeStyles } from "@material-ui/core";
 
-const useIconStyles = makeStyles((theme) => ({
+const useIconStyles = makeStyles(() => ({
     icon: {
         display: 'inline',
-        position: 'relative',
-        fontColor: theme.palette.primary
+        position: 'relative'
     },
 }));
 

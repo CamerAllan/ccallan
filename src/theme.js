@@ -45,7 +45,7 @@ export const theme = createMuiTheme({
     }
   },
   typography: {
-    fontSize: 14,
+    fontSize: 15,
     fontFamily: [
       'Roboto',
       '"Segoe UI"',

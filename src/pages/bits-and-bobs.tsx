@@ -5,6 +5,7 @@ import PaddedBox from 'components/util/PaddedBox'
 import { Box, makeStyles, Divider } from '@material-ui/core'
 import { SPACING } from '../constants/Constants'
 import { ColorLinkInternal } from 'components/util/Link'
+
 const useStyles = makeStyles((theme) => ({
   folderContainer: {
     display: 'flex',

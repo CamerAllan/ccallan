@@ -6,6 +6,7 @@ export interface Item {
   live: boolean
   wordCount: number
   content: string
+  long: boolean
   containingFolder: string
 }
 
