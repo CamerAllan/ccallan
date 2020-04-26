@@ -1,5 +1,5 @@
 import React from 'react';
-import { createHistory,LocationProvider }from "@reach/router";
+import { createHistory, LocationProvider } from "@reach/router";
 import ReactGA from "react-ga";
 import { TRACKING_ID, HOSTNAME } from '../constants/Constants';
 
@@ -13,17 +13,16 @@ let history: any = null;
 if (inProd) {
     ReactGA.initialize(TRACKING_ID);
     history = createHistory(window as any);
-    history.listen( (window: any) => {
+    history.listen((window: any) => {
         ReactGA.pageview(window.location.pathname + window.location.search);
-        console.log('page=>',window.location.pathname);
     });
 }
 
 const Analytics: React.FC<any> = (props) => {
 
-    return inProd ? 
-    <LocationProvider history={history} >{props.children}</LocationProvider> : 
-    props.children
+    return inProd ?
+        <LocationProvider history={history} >{props.children}</LocationProvider> :
+        props.children
 
 }
 

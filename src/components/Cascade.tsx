@@ -45,7 +45,6 @@ export default (props: CascadeProps) => {
         col %= props.numCols;
     })
 
-    console.log(cols)
     return (
         <Box className={classes.root}>
             {cols.map(col => {
