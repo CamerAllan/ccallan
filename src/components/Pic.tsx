@@ -6,7 +6,7 @@ const useStyles = makeStyles(theme => ({
         margin: 'auto',
         height: '250px',
         width: '250px',
-        border: `0.8rem double ${theme.palette.primary.main}`
+        border: `0.4rem solid ${theme.palette.primary.main}`
     }
 }));
 

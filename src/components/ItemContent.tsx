@@ -9,7 +9,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     image: {
         display: 'block',
         margin: '0 auto',
-        maxWidth: '95%'
+        maxWidth: '95%',
+        border: `0.4rem solid ${theme.palette.primary.main}`
     },
     para: {
         margin: theme.spacing(SPACING.SMALL)
