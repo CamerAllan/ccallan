@@ -2,27 +2,18 @@ import React from 'react'
 import { useRouteData } from 'react-static'
 import FolderCard, { FolderProps } from 'components/FolderCard'
 import PaddedBox from 'components/util/PaddedBox'
-import { Box, makeStyles, Divider } from '@material-ui/core'
-import { SPACING } from '../constants/Constants'
+import { Box, Divider, useMediaQuery, Theme } from '@material-ui/core'
 import { ColorLinkInternal } from 'components/util/Link'
-
-const useStyles = makeStyles((theme) => ({
-  folderContainer: {
-    display: 'flex',
-    flexFlow: 'row wrap',
-    padding: theme.spacing(SPACING.SMALL)
-  },
-  folder: {
-    flex: '1 1',
-    minWidth: 220,
-    marginLeft: theme.spacing(SPACING.SMALL),
-    marginRight: theme.spacing(SPACING.SMALL)
-  }
-}))
+import Cascade from 'components/Cascade'
+import { SM, XS } from '../constants/Constants'
 
 export default () => {
   const data: { folders: FolderProps[] } = useRouteData()
-  const classes = useStyles()
+
+  const s = useMediaQuery((theme: Theme) => theme.breakpoints.down(SM))
+  const xs = useMediaQuery((theme: Theme) => theme.breakpoints.down(XS))
+
+  const numCols = xs ? 1 : (s ? 2 : 3)
 
   // Sort folders alphabetically
   data.folders.sort((a, b) => {
@@ -41,16 +32,14 @@ export default () => {
         Perfection is the enemy - anything goes here.
       </p>
       <Divider />
-      <Box className={classes.folderContainer}>
-        {data.folders.map(folder => (
+      <Cascade numCols={numCols} items={
+        data.folders.map(folder => (
           !folder.live ? null :
-            <Box key={folder.id} className={classes.folder}>
-              <PaddedBox>
-                <FolderCard {...folder} />
-              </PaddedBox>
-            </Box>
-        ))}
-      </Box>
+            <PaddedBox>
+              <FolderCard {...folder} />
+            </PaddedBox>
+        ))
+      } />
     </Box >
   )
 }

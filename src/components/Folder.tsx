@@ -1,31 +1,23 @@
 import React from 'react'
 import { useRouteData } from 'react-static'
 import PaddedBox from 'components/util/PaddedBox'
-import { Box, makeStyles, Divider } from '@material-ui/core'
-import { SPACING } from '../constants/Constants'
+import { Box, Divider, useMediaQuery, Theme } from '@material-ui/core'
 import ItemCard from './ItemCard'
 import { Folder } from 'types/index'
 import { ColorLinkInternal } from './util/Link'
-
-const useStyles = makeStyles((theme) => ({
-    folder: {
-        display: 'flex',
-        flexFlow: 'row wrap',
-        padding: theme.spacing(SPACING.SMALL)
-    },
-    item: {
-        flex: '1 1',
-        minWidth: 200,
-        margin: theme.spacing(SPACING.SMALL)
-    }
-}))
+import Cascade from './Cascade'
+import { SM } from '../constants/Constants'
 
 export default () => {
     const { folder: { id, title, description, items } }: { folder: Folder } = useRouteData()
-    const classes = useStyles()
+
+    const s = useMediaQuery((theme: Theme) => theme.breakpoints.down(SM))
+
+    const numCols = s ? 1 : 2
 
     // Sort contents by date
     items.sort((a, b) => (b.date - a.date))
+
 
     return (
         <Box>
@@ -33,16 +25,11 @@ export default () => {
             <h1>{title}</h1>
             <h2>{description}</h2>
             <Divider />
-            <Box className={classes.folder}>
-                {items.map(item => (
-                    !item.live ? null :
-                        <Box className={classes.item}>
-                            <PaddedBox>
-                                < ItemCard item={item} containingFolder={id} />
-                            </PaddedBox>
-                        </Box>
-                ))}
-            </Box>
+            <Cascade numCols={numCols} items={items.map(item => (
+                <PaddedBox>
+                    < ItemCard item={item} containingFolder={id} />
+                </PaddedBox>
+            ))} />
         </Box>
     )
 }
