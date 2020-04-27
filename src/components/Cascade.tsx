@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         flexFlow: 'column nowrap'
     },
     item: {
-        flex: '1 1',
+        flex: '0 1',
         marginLeft: theme.spacing(SPACING.SMALL),
         marginRight: theme.spacing(SPACING.SMALL)
     }
