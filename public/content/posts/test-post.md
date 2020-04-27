@@ -3,6 +3,7 @@ date: 6 Apr, 2020
 title: Test post!
 description: This is my first post, which I'll be using as a reference as I work on the site. It might change or disappear but hopefully there will be more to come!
 live: false
+long: true
 ---
 
 # Hello

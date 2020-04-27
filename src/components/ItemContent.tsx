@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 interface ItemContentProps {
-    dark?: boolean;
+    preview?: boolean;
     onlyDescription?: boolean;
     item: Item;
     containingFolder: string;
@@ -32,7 +32,7 @@ interface ItemContentProps {
 
 export default (props: ItemContentProps) => {
 
-    const { item: { id, content, description }, containingFolder, dark, onlyDescription } = props
+    const { item: { id, content, description }, containingFolder, preview, onlyDescription } = props
 
     const classes = useStyles();
 
@@ -48,10 +48,12 @@ export default (props: ItemContentProps) => {
         return <p className={classes.para} {...props} />
     }
 
+    const dimensions = preview ? IMAGE_DIMENSIONS.PREVIEW : IMAGE_DIMENSIONS.FULL;
+
     return (
-        <Box className={dark ? classes.dark : classes.light}>
+        <Box className={preview ? classes.dark : classes.light}>
             <ReactMarkdown
-                transformImageUri={(imageName) => `/images/${containingFolder}/${id}/${imageName}?nf_resize=smartcrop&w=${IMAGE_DIMENSIONS.WIDTH}&h=${IMAGE_DIMENSIONS.HEIGHT}`}
+                transformImageUri={(imageName) => `/images/${containingFolder}/${id}/${imageName}?nf_resize=smartcrop&w=${dimensions.WIDTH}&h=${dimensions.HEIGHT}`}
                 source={onlyDescription ? description : content}
                 renderers={{ image: imageRenderer, paragraph: paragraphRenderer, link: linkRenderer }} />
         </Box>

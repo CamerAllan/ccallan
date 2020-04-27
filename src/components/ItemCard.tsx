@@ -40,13 +40,13 @@ const FolderCard: React.FC<ItemProps> = (props) => {
                         {
                             long ? (
                                 <>
-                                    <ItemContent dark onlyDescription item={props.item} containingFolder={props.containingFolder} />
+                                    <ItemContent preview onlyDescription item={props.item} containingFolder={props.containingFolder} />
                                     <ColorLinkInternal to={`/bits-and-bobs/${props.containingFolder}/${id}/`}>
                                         <Typography align='right' color='primary'><i>Read full post...</i></Typography>
                                     </ColorLinkInternal>
                                 </>)
                                 :
-                                <ItemContent dark item={props.item} containingFolder={props.containingFolder} />
+                                <ItemContent preview item={props.item} containingFolder={props.containingFolder} />
                         }
 
                     </Box>

@@ -17,6 +17,13 @@ export const HOSTNAME = 'ccallan.dev'
 export const TRACKING_ID = 'UA-163465341-1'
 
 export const IMAGE_DIMENSIONS = {
-    WIDTH: 960,
-    HEIGHT: 540
+    PREVIEW: {
+        WIDTH: 250,
+        HEIGHT: 250
+    },
+    FULL: {
+        WIDTH: 450,
+        HEIGHT: 450
+    }
+
 }
