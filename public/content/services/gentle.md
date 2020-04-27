@@ -5,7 +5,10 @@ description: Gentle social network
 live: true
 ---
 
+![Gentle](gentle.png)
+
 I like the concept of [Gentle](https://gentle.app).
+
 It's an anonymous social network where users share their concerns and receive reassuring replies written by other users.
 I haven't tried it out (there's only an iOS beta as of 2020/4/27) but it sounds like a wholesome idea.
 
