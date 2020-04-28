@@ -7,15 +7,12 @@ import { ColorLinkExternal } from './util/Link';
 
 const useStyles = (preview: boolean) => makeStyles((theme: Theme) => ({
     image: {
+        width: preview ? IMAGE_DIMENSIONS.PREVIEW.WIDTH : IMAGE_DIMENSIONS.FULL.WIDTH,
+        height: preview ? IMAGE_DIMENSIONS.PREVIEW.HEIGHT : IMAGE_DIMENSIONS.FULL.HEIGHT,
         display: 'block',
         margin: '0 auto',
         maxWidth: '95%',
         border: `0.4rem solid ${theme.palette.primary.main}`
-    },
-    imagePlaceholder: {
-        width: preview ? IMAGE_DIMENSIONS.PREVIEW.WIDTH : IMAGE_DIMENSIONS.FULL.WIDTH,
-        height: preview ? IMAGE_DIMENSIONS.PREVIEW.HEIGHT : IMAGE_DIMENSIONS.FULL.HEIGHT,
-        backgroundColor: 'primary'
     },
     para: {
         margin: theme.spacing(SPACING.SMALL)
@@ -47,9 +44,7 @@ export default (props: ItemContentProps) => {
 
     const imageRenderer = (props: any) => {
         return (
-            <React.Suspense fallback={<Box className={classes.imagePlaceholder}></Box>}>
-                <img className={classes.image} {...props} />
-            </React.Suspense>
+            <img className={classes.image} {...props} />
         )
     }
 
