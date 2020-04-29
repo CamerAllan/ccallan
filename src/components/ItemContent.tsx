@@ -8,7 +8,7 @@ import { ColorLinkExternal } from './util/Link';
 const useStyles = (preview: boolean) => makeStyles((theme: Theme) => ({
     image: {
         width: preview ? IMAGE_DIMENSIONS.PREVIEW.WIDTH : 'unset',
-        height: preview ? IMAGE_DIMENSIONS.PREVIEW.HEIGHT : 'unset',
+        height: preview ? IMAGE_DIMENSIONS.PREVIEW.HEIGHT : IMAGE_DIMENSIONS.FULL.MAX_HEIGHT,
         display: 'block',
         margin: '0 auto',
         maxWidth: '95%',
