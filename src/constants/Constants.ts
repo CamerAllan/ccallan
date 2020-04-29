@@ -22,8 +22,7 @@ export const IMAGE_DIMENSIONS = {
         HEIGHT: 250
     },
     FULL: {
-        WIDTH: 450,
-        HEIGHT: 450
+        MAX_HEIGHT: 500
     }
 
 }
