@@ -52,7 +52,7 @@ export default (props: ItemContentProps) => {
         return <p className={classes.para} {...props} />
     }
 
-    const imageQuery = preview ? `nf_resize=smartcrop&w=${IMAGE_DIMENSIONS.PREVIEW.WIDTH}&h=${IMAGE_DIMENSIONS.PREVIEW.HEIGHT}` : `?nf_resize=fit&h=${IMAGE_DIMENSIONS.FULL.MAX_HEIGHT}`
+    const imageQuery = preview ? `nf_resize=smartcrop&w=${IMAGE_DIMENSIONS.PREVIEW.WIDTH}&h=${IMAGE_DIMENSIONS.PREVIEW.HEIGHT}` : `nf_resize=fit&h=${IMAGE_DIMENSIONS.FULL.MAX_HEIGHT}`
 
     return (
         <Box className={preview ? classes.dark : classes.light}>
