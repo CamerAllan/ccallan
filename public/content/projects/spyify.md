@@ -7,6 +7,7 @@ live: true
 ---
 
 [Spyify](https://github.com/CamerAllan/spyify) is a [mitmproxy](https://github.com/mitmproxy/mitmproxy) script that allows you to record what your friends are listening to on Spotify.
+
 I made it with the intention of doing some kind of analysis on the data, but ran into issues with keeping the desktop client awake for periods of more than a day.
 This meant that I'd have to use the client on the recording device daily, which makes it impractical for long-term use.
 
