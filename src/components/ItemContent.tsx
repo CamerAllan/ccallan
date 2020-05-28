@@ -7,8 +7,8 @@ import { ColorLinkExternal } from './util/Link';
 
 const useStyles = (preview: boolean) => makeStyles((theme: Theme) => ({
     image: {
-        width: preview ? IMAGE_DIMENSIONS.PREVIEW.WIDTH : IMAGE_DIMENSIONS.FULL.WIDTH,
-        height: preview ? IMAGE_DIMENSIONS.PREVIEW.HEIGHT : IMAGE_DIMENSIONS.FULL.HEIGHT,
+        width: preview ? IMAGE_DIMENSIONS.PREVIEW.WIDTH : 'unset',
+        height: preview ? IMAGE_DIMENSIONS.PREVIEW.HEIGHT : IMAGE_DIMENSIONS.FULL.MAX_HEIGHT,
         display: 'block',
         margin: '0 auto',
         maxWidth: '95%',
@@ -52,12 +52,12 @@ export default (props: ItemContentProps) => {
         return <p className={classes.para} {...props} />
     }
 
-    const dimensions = preview ? IMAGE_DIMENSIONS.PREVIEW : IMAGE_DIMENSIONS.FULL;
+    const imageQuery = preview ? `nf_resize=smartcrop&w=${IMAGE_DIMENSIONS.PREVIEW.WIDTH}&h=${IMAGE_DIMENSIONS.PREVIEW.HEIGHT}` : `nf_resize=fit&h=${IMAGE_DIMENSIONS.FULL.MAX_HEIGHT}`
 
     return (
         <Box className={preview ? classes.dark : classes.light}>
             <ReactMarkdown
-                transformImageUri={(imageName) => `/images/${containingFolder}/${id}/${imageName}?nf_resize=smartcrop&w=${dimensions.WIDTH}&h=${dimensions.HEIGHT}`}
+                transformImageUri={(imageName) => `/images/${containingFolder}/${id}/${imageName}?${imageQuery}`}
                 source={onlyDescription ? description : content}
                 renderers={{ image: imageRenderer, paragraph: paragraphRenderer, link: linkRenderer }} />
         </Box>
