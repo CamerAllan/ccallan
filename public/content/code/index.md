@@ -4,4 +4,4 @@ icon: 'Code'
 live: true
 ---
 
-Helpful snippets and repos.
+Helpful snippets, repos and posts related to programming.
