@@ -56,8 +56,6 @@ export async function getStaticProps() {
 
 export default function Posts(posts: any) {
   return (
-    <div>
-      {posts}
-    </div>
+    posts.data.map((e: any) => <div>{e.id}</div>)
   );
 }
