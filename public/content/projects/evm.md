@@ -28,3 +28,5 @@ It currently supports Linux, maybe OSX, definitely not Windows.
 There's also very little error handling and no tests.
 
 Hopefully I'll get around to fixing these things but if you get there first, feel free to submit feature requests, issues or PRs!
+
+I'll try and do a full writeup in the form of a blog post at some point.
