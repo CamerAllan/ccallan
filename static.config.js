@@ -32,6 +32,7 @@ const getFolders = () => {
           date: Date.parse(fileData.date),
           id: fileName.slice(0, -3), // Trim '.md'
           containingFolder: folderName,
+          wordCount: fileContents.split(' ').length,
           content: fileContents
         }
         if (item.live) {

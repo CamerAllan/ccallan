@@ -1,6 +1,6 @@
 import { Box, makeStyles, Typography } from "@material-ui/core"
 import React from "react"
-import { MaterialIcon } from "../util/MaterialIcon"
+import { MaterialIcon } from "./util/MaterialIcon"
 import { ColorLinkInternal } from "./util/Link"
 
 const useStyles = makeStyles(() => ({
@@ -39,7 +39,7 @@ const Title: React.FC<TitleProps> = (props: TitleProps) => {
             </Box>
             <Box className={classes.icon}>
                 <Typography component="h5" variant="h5">
-                    {MaterialIcon(props.icon)}
+                    <MaterialIcon icon={props.icon} />
                 </Typography>
             </Box>
         </Box >

@@ -1,9 +1,13 @@
 import { Box } from "@material-ui/core"
 import React from "react"
-import useIconClasses from '../styles/IconStyle'
+import useIconClasses from '../../styles/IconStyle'
 
-export const MaterialIcon = (icon) => {
-    let iconName = icon.replace(/Icon$/, '')
+interface MaterialIconProps {
+    icon: string
+}
+
+export const MaterialIcon: React.FC<MaterialIconProps> = (props: MaterialIconProps) => {
+    let iconName = props.icon.replace(/Icon$/, '')
     let resolved = require(`@material-ui/icons/${iconName}Outlined`).default
 
     if (!resolved) {
