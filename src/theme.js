@@ -3,7 +3,7 @@ import { createMuiTheme } from '@material-ui/core'
 
 const font = "'Raleway', sans-serif";
 
-const dark = '#444444'
+const dark = '#333333'
 const yellow = '#F7A21B'
 const green = '#54A88C'
 const light = '#f9ffff'

@@ -7,7 +7,7 @@ live: true
 ---
 
 I just published version `0.1.0` of my binary version management tool, [evm](https://github.com/CamerAllan/evm)!
-Evm stands for [Everything Version Manager].
+Evm stands for *Everything Version Manager*.
 
 I started making this tool after a frustrating situation at work.
 I was trying to locate the version of a [working version](https://github.com/roboll/helmfile/releases/tag/v0.125.0) of the [helmfile](https://github.com/roboll/helmfile/tree/master) binary.

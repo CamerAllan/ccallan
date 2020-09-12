@@ -16,9 +16,7 @@ const Navigation: React.FC = () => {
 
     return (
         <Box className={classes.root} >
-            <ColorLinkInternal to="/">About Me</ColorLinkInternal>
-            {'  //  '}
-            <ColorLinkInternal to="/bits-and-bobs/posts">Blog</ColorLinkInternal>
+            <ColorLinkInternal to="/">Home</ColorLinkInternal>
             {'  //  '}
             <ColorLinkInternal to="/bits-and-bobs">Bits & Bobs</ColorLinkInternal>
         </Box>

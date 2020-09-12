@@ -62,7 +62,7 @@ export default {
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getRoutes: async () => {
     const folders = getFolders();
-    const latestItems = getLatest(folders, 5);
+    const latestItems = getLatest(folders, 8);
     return [
       {
         path: '/bits-and-bobs/',
