@@ -26,7 +26,7 @@ export default () => {
     <Box className={classes.root}>
       <Typography >
         <h1>
-          About me
+          Home
         </h1>
         <p> Hi, I'm <b>Cameron Allan</b>.</p>
         <p> I'm currently software engineering at <ColorLinkExternal to='https://www.dunnhumby.com'>dunnhumby</ColorLinkExternal> </p>
@@ -37,7 +37,7 @@ export default () => {
 
       <Divider />
 
-      <h2>Latest:</h2>
+      <h2>Recent:</h2>
       <Cascade numCols={numCols} items={
         data.latestItems.map(item => {
           return (

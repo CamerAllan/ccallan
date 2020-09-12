@@ -125,3 +125,5 @@ artifacts/
 
 # Local Netlify folder
 .netlify
+
+.vscode

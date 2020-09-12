@@ -1,19 +1,13 @@
 import React from "react";
 import { Box, Card, makeStyles, Typography, CardContent } from "@material-ui/core";
-import { ColorLinkInternal } from "./util/Link";
-import { MaterialIcon } from "../util/MaterialIcon"
 import { Item } from "types/index";
+import Title from "./Title";
 
 const useStyles = makeStyles(() => ({
     root: {
         display: 'flex',
         flexFlow: 'row wrap'
     },
-    left: {
-        flex: '1 0 auto'
-    },
-    right: {
-    }
 }))
 
 export interface FolderProps {
@@ -28,27 +22,18 @@ export interface FolderProps {
 const FolderCard: React.FC<FolderProps> = (props) => {
 
     const { id, title, icon, items } = props;
+    var rand = Math.random() >= 0.5;
+    const bobsText = `${(rand ? "bit" : "bob")}${items.length != 1 ? "s" : ""}`
     const classes = useStyles();
 
     return (
         <Box >
-            <ColorLinkInternal to={`/bits-and-bobs/${id}/`}>
-                <Card variant='outlined'>
-                    <CardContent className={classes.root}>
-                        <Box className={classes.left}>
-                            <Typography gutterBottom component="h5" variant="h5">
-                                {MaterialIcon({ icon })}
-                            </Typography>
-                            <Typography color='secondary' component="h5" variant="h5">
-                                {title}
-                            </Typography>
-                        </Box>
-                        <Box className={classes.right}>
-                            <Typography color='primary' align='right'><b>{items.length}</b></Typography>
-                        </Box>
-                    </CardContent>
-                </Card>
-            </ColorLinkInternal>
+            <Card variant='outlined'>
+                <CardContent className={classes.root}>
+                    <Title title={title} icon={icon} to={`/bits-and-bobs/${id}/`} />
+                    <Typography color='secondary' align='right'>{`${items.length} ${bobsText}`}</Typography>
+                </CardContent>
+            </Card>
         </Box>
     )
 };

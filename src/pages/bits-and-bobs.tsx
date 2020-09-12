@@ -1,14 +1,16 @@
 import React from 'react'
 import { useRouteData } from 'react-static'
-import FolderCard, { FolderProps } from 'components/FolderCard'
-import PaddedBox from 'components/util/PaddedBox'
+import FolderCard, { FolderProps } from '../components/FolderCard'
+import PaddedBox from '../components/util/PaddedBox'
 import { Box, Divider, useMediaQuery, Theme } from '@material-ui/core'
-import { ColorLinkInternal } from 'components/util/Link'
-import Cascade from 'components/Cascade'
+import { ColorLinkInternal } from '../components/util/Link'
+import Cascade from '../components/Cascade'
 import { SM, XS } from '../constants/Constants'
 
 export default () => {
   const data: { folders: FolderProps[] } = useRouteData()
+
+  console.log(data)
 
   const s = useMediaQuery((theme: Theme) => theme.breakpoints.down(SM))
   const xs = useMediaQuery((theme: Theme) => theme.breakpoints.down(XS))

@@ -69,9 +69,7 @@ export default {
         children: folders.map((folder) => ({
           path: `/${folder.id}`,
           template: 'src/components/Folder',
-          getData: () => ({
-            folder,
-          }),
+          getData: () => ({ folder }),
           children: folder.items.map(item => ({
             path: `/${item.id}`,
             template: 'src/components/Item',

@@ -21,7 +21,7 @@
     "react-ga": "^2.7.0",
     "react-jss": "^8.0.0",
     "react-markdown": "^4.3.1",
-    "react-static": "^7.2.3",
+    "react-static": "^7.3.0",
     "react-static-plugin-jss": "^7.2.2",
     "react-static-plugin-reach-router": "^7.2.0",
     "react-static-plugin-sitemap": "^7.2.0",
