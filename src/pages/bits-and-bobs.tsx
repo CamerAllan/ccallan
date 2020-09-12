@@ -10,8 +10,6 @@ import { SM, XS } from '../constants/Constants'
 export default () => {
   const data: { folders: FolderProps[] } = useRouteData()
 
-  console.log(data)
-
   const s = useMediaQuery((theme: Theme) => theme.breakpoints.down(SM))
   const xs = useMediaQuery((theme: Theme) => theme.breakpoints.down(XS))
 

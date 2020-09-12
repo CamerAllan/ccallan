@@ -31,8 +31,6 @@ const FolderCard: React.FC<ItemProps> = (props) => {
 
     const { id, title, long, icon, containingFolder, wordCount } = props.item;
 
-    console.log(props)
-
     return (
         <Box >
             <Card variant='outlined'>
