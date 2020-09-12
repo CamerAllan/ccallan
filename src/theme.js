@@ -1,8 +1,11 @@
 
 import { createMuiTheme } from '@material-ui/core'
 
-const dark = '#25323A'
-const accent = '#54A88C'
+const font = "'Raleway', sans-serif";
+
+const dark = '#444444'
+const yellow = '#F7A21B'
+const green = '#54A88C'
 const light = '#f9ffff'
 
 export const theme = createMuiTheme({
@@ -10,15 +13,15 @@ export const theme = createMuiTheme({
     type: 'light',
     text: {
       primary: dark,
-      secondary: '#ffffff'
+      secondary: light
     },
     primary: {
-      main: accent,
+      main: yellow,
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
     },
     secondary: {
-      main: dark,
+      main: green,
     },
     info: {
       main: light
@@ -46,18 +49,7 @@ export const theme = createMuiTheme({
   },
   typography: {
     fontSize: 15,
-    fontFamily: [
-      'Roboto',
-      '"Segoe UI"',
-      '"Helvetica Neue"',
-      'Arial',
-      '-apple-system',
-      'BlinkMacSystemFont',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
+    fontFamily: font
   }
 }
 );

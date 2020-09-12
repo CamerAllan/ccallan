@@ -3,6 +3,7 @@ export interface Item {
   title: string
   date: number
   description: string
+  icon: string
   live: boolean
   wordCount: number
   content: string

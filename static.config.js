@@ -8,25 +8,30 @@ const getFolders = () => {
 
   const folders = [] //: Folder[]
   fs.readdirSync(contentPath).forEach(folderName => {
-    let folder = {} //: Folder
-    folder.items = []
+
+    const folderIndex = fs.readFileSync(`${contentPath}/${folderName}/index.md`);
+    const folderMatter = matter(folderIndex)
+    const folderDesc = folderMatter.content
+    const fileData = folderMatter.data
+    const folder = {
+      ...fileData,
+      id: folderName,
+      description: folderDesc,
+      items: []
+    }
+
     fs.readdirSync(`${contentPath}/${folderName}`).forEach(fileName => {
       const file = fs.readFileSync(`${contentPath}/${folderName}/${fileName}`, 'utf8');
       const fileMatter = matter(file)
       const fileContents = fileMatter.content
       const fileData = fileMatter.data
-      if (fileName == 'index.md') {
-        folder = {
-          ...folder,
-          ...fileData,
-          id: folderName,
-          description: fileContents,
-        }
-      } else {
+      if (fileName != 'index.md') {
         const item = {
           ...fileData,
+          icon: folder.icon,
           date: Date.parse(fileData.date),
           id: fileName.slice(0, -3), // Trim '.md'
+          containingFolder: folderName,
           content: fileContents
         }
         if (item.live) {
@@ -46,10 +51,17 @@ const getFolders = () => {
   return folders;
 }
 
+const getLatest = (folders, num) => {
+  return folders.flatMap((folder) => folder.items)
+    .sort((a, b) => b.date - a.date)
+    .slice(0, num);
+}
+
 export default {
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getRoutes: async () => {
-    const folders = getFolders()
+    const folders = getFolders();
+    const latestItems = getLatest(folders, 5);
     return [
       {
         path: '/bits-and-bobs/',
@@ -64,11 +76,14 @@ export default {
             path: `/${item.id}`,
             template: 'src/components/Item',
             getData: () => ({
-              item,
-              containingFolder: folder.id
+              item
             })
           })),
         })),
+      },
+      {
+        path: '/',
+        getData: () => ({ latestItems }),
       },
     ]
   },

@@ -9,7 +9,7 @@ import Cascade from './Cascade'
 import { SM } from '../constants/Constants'
 
 export default () => {
-    const { folder: { id, title, description, items } }: { folder: Folder } = useRouteData()
+    const { folder: { title, description, items } }: { folder: Folder } = useRouteData()
 
     const s = useMediaQuery((theme: Theme) => theme.breakpoints.down(SM))
 
@@ -27,7 +27,7 @@ export default () => {
             <Divider />
             <Cascade numCols={numCols} items={items.map(item => (
                 <PaddedBox>
-                    < ItemCard item={item} containingFolder={id} />
+                    < ItemCard item={item} />
                 </PaddedBox>
             ))} />
         </Box>

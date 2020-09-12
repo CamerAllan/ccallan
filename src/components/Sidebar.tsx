@@ -8,7 +8,7 @@ import { SPACING, SM } from '../constants/Constants';
 const useStyles = makeStyles(theme => ({
     root: {
         paddingTop: theme.spacing(SPACING.MEDIUM),
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor: theme.palette.background.paper,
         textAlign: 'center',
         alignItems: 'center',
         justifyContent: 'center',

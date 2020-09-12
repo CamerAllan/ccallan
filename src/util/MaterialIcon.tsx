@@ -1,6 +1,6 @@
+import { Box } from "@material-ui/core"
 import React from "react"
 import useIconClasses from '../styles/IconStyle'
-import { Avatar as CoreAvatar } from "@material-ui/core"
 
 export const MaterialIcon = ({ icon }) => {
     let iconName = icon.replace(/Icon$/, '')
@@ -11,8 +11,8 @@ export const MaterialIcon = ({ icon }) => {
     }
 
     return (
-        <CoreAvatar>
-            {React.createElement(resolved, { className: useIconClasses().icon, color: 'secondary', fontSize: 'inherit' })}
-        </CoreAvatar>
+        <Box>
+            {React.createElement(resolved, { className: useIconClasses().icon, fontSize: 'inherit', color: 'primary' })}
+        </Box>
     )
 }

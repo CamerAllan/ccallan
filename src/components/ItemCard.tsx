@@ -3,6 +3,7 @@ import { Box, Card, makeStyles, CardContent, Typography } from "@material-ui/cor
 import { ColorLinkInternal } from "./util/Link";
 import { Item } from "types/index";
 import ItemContent from "./ItemContent";
+import { MaterialIcon } from "../util/MaterialIcon";
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -18,13 +19,13 @@ const useStyles = makeStyles(() => ({
 }))
 
 export interface ItemProps {
-    containingFolder: string
     item: Item
 }
 
 const FolderCard: React.FC<ItemProps> = (props) => {
 
-    const { id, title, long } = props.item;
+    const { id, title, long, icon, containingFolder } = props.item;
+    console.log(props.item)
     const classes = useStyles();
 
     return (
@@ -32,21 +33,21 @@ const FolderCard: React.FC<ItemProps> = (props) => {
             <Card variant='outlined'>
                 <CardContent className={classes.root}>
                     <Box className={classes.left}>
-                        <ColorLinkInternal to={`/bits-and-bobs/${props.containingFolder}/${id}/`}>
-                            <Typography gutterBottom color='primary' component="h5" variant="h5">{title}</Typography>
+                        <Typography gutterBottom component="h5" variant="h5">
+                            {MaterialIcon({ icon })}
+                        </Typography>
+                        <ColorLinkInternal to={`/bits-and-bobs/${containingFolder}/${id}/`}>
+                            <Typography gutterBottom color='secondary' component="h5" variant="h5">{title}</Typography>
                         </ColorLinkInternal>
                     </Box>
                     <Box className={classes.right}>
                         {
                             long ? (
                                 <>
-                                    <ItemContent preview onlyDescription item={props.item} containingFolder={props.containingFolder} />
-                                    <ColorLinkInternal to={`/bits-and-bobs/${props.containingFolder}/${id}/`}>
-                                        <Typography align='right' color='primary'><i>Read full post...</i></Typography>
-                                    </ColorLinkInternal>
+                                    <ItemContent preview onlyDescription item={props.item} containingFolder={containingFolder} />
                                 </>)
                                 :
-                                <ItemContent preview item={props.item} containingFolder={props.containingFolder} />
+                                <ItemContent preview item={props.item} containingFolder={containingFolder} />
                         }
 
                     </Box>

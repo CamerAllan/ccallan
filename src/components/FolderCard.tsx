@@ -30,23 +30,21 @@ const FolderCard: React.FC<FolderProps> = (props) => {
     const { id, title, icon, items } = props;
     const classes = useStyles();
 
-    const countText = items.length == 1 ? 'item' : 'items'
-
     return (
         <Box >
             <ColorLinkInternal to={`/bits-and-bobs/${id}/`}>
                 <Card variant='outlined'>
                     <CardContent className={classes.root}>
                         <Box className={classes.left}>
-                            <Typography gutterBottom color='primary' component="h5" variant="h5">
+                            <Typography gutterBottom component="h5" variant="h5">
                                 {MaterialIcon({ icon })}
                             </Typography>
-                            <Typography color='primary' component="h5" variant="h5">
+                            <Typography color='secondary' component="h5" variant="h5">
                                 {title}
                             </Typography>
                         </Box>
                         <Box className={classes.right}>
-                            <Typography color='primary' align='right'><b>{`${items.length} ${countText}`}</b></Typography>
+                            <Typography color='primary' align='right'><b>{items.length}</b></Typography>
                         </Box>
                     </CardContent>
                 </Card>
