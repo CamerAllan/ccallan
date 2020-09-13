@@ -37,7 +37,7 @@ export default () => {
 
       <Divider />
 
-      <h2>Recent:</h2>
+      <h2>Recent</h2>
       <Cascade numCols={numCols} items={
         data.latestItems.map(item => {
           return (
