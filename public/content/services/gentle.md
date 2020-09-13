@@ -7,6 +7,9 @@ live: true
 
 ![Gentle](gentle.png)
 
+Update: Sadly gentle has [shut down](https://gentle.app/shutdown).
+The owner has however made the source code available!
+
 I like the concept of [Gentle](https://gentle.app).
 
 It's an anonymous social network where users share their concerns and receive reassuring replies written by other users.
