@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes } from "react-static";
-import { makeStyles, Box, LinearProgress } from "@material-ui/core";
+import { makeStyles, Box } from "@material-ui/core";
 import { Router } from "@reach/router";
 import Analytics from "./Analytics";
 
@@ -9,17 +9,17 @@ const useStyles = makeStyles({
     root: {
         maxWidth: 750
     }
-}) 
+})
 
 
 
 const Content: React.FC = () => {
-    
+
     const classes = useStyles();
-    
+
     return (
         <Box className={classes.root}>
-            <React.Suspense fallback={<LinearProgress variant="query" />}>
+            <React.Suspense fallback={<div>Loading...</div>}>
                 <Analytics>
                     <Router>
                         <Routes path="*" />
@@ -30,4 +30,4 @@ const Content: React.FC = () => {
     )
 }
 
-export default Content ;
+export default Content;
