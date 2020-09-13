@@ -40,14 +40,14 @@ const FolderCard: React.FC<ItemProps> = (props) => {
                         {
                             long ? (
                                 <>
-                                    <ItemContent preview onlyDescription item={props.item} containingFolder={containingFolder} />
+                                    <ItemContent preview onlyDescription item={props.item} />
                                     <Box className={classes.foot}>
                                         <MaterialIcon icon={"Timer"} />
                                         <Typography className={classes.footIcon} color={"primary"}>&nbsp;{`${Math.ceil(wordCount / WORDS_PER_MINUTE)} minute read`}</Typography>
                                     </Box>
                                 </>)
                                 :
-                                <ItemContent preview item={props.item} containingFolder={containingFolder} />
+                                <ItemContent preview item={props.item} />
                         }
 
                     </Box>

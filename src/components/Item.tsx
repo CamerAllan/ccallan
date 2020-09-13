@@ -6,16 +6,16 @@ import ItemContent from './ItemContent'
 
 
 export default () => {
-  const { item, containingFolder }: { item: Item, containingFolder: string } = useRouteData()
+  const { item }: { item: Item } = useRouteData()
 
   return (
     <>
       <div>
-        <ColorLinkInternal to={`/bits-and-bobs/${containingFolder}`}>{'<'} Back</ColorLinkInternal>
+        <ColorLinkInternal to={`/bits-and-bobs/${item.containingFolder}`}>{'<'} Back</ColorLinkInternal>
         <h1>
           {item.title}
         </h1>
-        <ItemContent item={item} containingFolder={containingFolder} />
+        <ItemContent item={item} />
       </div>
     </>
   )

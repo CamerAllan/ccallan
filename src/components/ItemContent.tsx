@@ -29,12 +29,11 @@ interface ItemContentProps {
     preview?: boolean;
     onlyDescription?: boolean;
     item: Item;
-    containingFolder: string;
 }
 
 export default (props: ItemContentProps) => {
 
-    const { item: { id, content, description }, containingFolder, preview, onlyDescription } = props
+    const { item: { id, content, description, containingFolder }, preview, onlyDescription } = props
 
     const classes = useStyles(preview)();
 
