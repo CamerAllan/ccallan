@@ -12,7 +12,7 @@ const useStyles = (preview: boolean) => makeStyles((theme: Theme) => ({
         display: 'block',
         margin: '0 auto',
         maxWidth: '95%',
-        border: `0.4rem solid ${theme.palette.primary.main}`
+        border: `0.4rem solid ${theme.palette.secondary.main}`
     },
     para: {
         margin: theme.spacing(SPACING.SMALL)

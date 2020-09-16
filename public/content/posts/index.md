@@ -1,7 +1,7 @@
 ---
-title: 'Blog Posts'
+title: 'Posts'
 icon: 'Subject'
 live: true
 ---
 
-Posts and articles I've enjoyed (or written!).
+Interesting posts, mostly from the blogs of other people.

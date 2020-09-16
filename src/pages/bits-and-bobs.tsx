@@ -26,10 +26,8 @@ export default () => {
     <Box>
       <ColorLinkInternal to="/">{'<'} Back</ColorLinkInternal>
       <h1>Bits & Bobs</h1>
-      <h2>Ideas, Drafts, Opinions</h2>
       <p>
-        This is a dumping ground for ideas, things I want to remember, and any other notes that need a place. <br />
-        Perfection is the enemy - anything goes here.
+        Mmmmm look at all these folders.
       </p>
       <Divider />
       <Cascade numCols={numCols} items={

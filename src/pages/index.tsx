@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography, makeStyles, Box, Divider, Theme, useMediaQuery } from '@material-ui/core'
-import { ColorLinkExternal, ColorLinkInternal } from 'components/util/Link';
+import { ColorLinkInternal, ColorLinkExternal } from 'components/util/Link';
 import Cascade from '../components/Cascade';
 import ItemCard from '../components/ItemCard'
 import PaddedBox from '../components/util/PaddedBox';
@@ -29,8 +29,9 @@ export default () => {
           Home
         </h1>
         <p> Hi, I'm <b>Cameron Allan</b>.</p>
-        <p> I built this site to encourage myself to write more. There's a <ColorLinkInternal to='/bits-and-bobs/posts'>blog</ColorLinkInternal> featuring fully formed thoughts and coherent sentences, then there's <ColorLinkInternal to='/bits-and-bobs'>bits & bobs</ColorLinkInternal> featuring everything else.</p>
-        <p> This gives me a space to start typing no matter what level of effort I feel like putting in, so no excuses. </p>
+        <p>This is my website, where I put stuff.</p>
+        <p>If you go to <ColorLinkInternal to='/bits-and-bobs/'>Bits & Bobs</ColorLinkInternal>, you'll find a collection of niche projects, somewhat original thoughts, and radical articles.</p>
+        <p>If that sounds great to you, take a peek.</p>
         <p> Feel free to reach out to me for any reason at <ColorLinkExternal to='mailto:cameronallandev@gmail.com'>cameronallandev@gmail.com</ColorLinkExternal></p>
       </Typography>
 
