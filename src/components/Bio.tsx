@@ -22,7 +22,7 @@ const Bio: React.FC<BioProps> = (props) => {
           <PaddedBox size='large'>
             <Typography variant='h4'>{props.name}</Typography>
           </PaddedBox>
-          <Typography variant='body1'>Hi! This is where I keep my thoughts. </Typography>
+          <Typography variant='body1'>Hi! This is where I keep my things. </Typography>
         </PaddedBox>
       </Typography>
     </Container>
