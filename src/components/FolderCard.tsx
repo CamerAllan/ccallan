@@ -30,7 +30,7 @@ const FolderCard: React.FC<FolderProps> = (props) => {
         <Box >
             <Card variant='outlined'>
                 <CardContent className={classes.root}>
-                    <Title title={title} icon={icon} to={`/bits-and-bobs/${id}/`} />
+                    <Title title={title} icon={icon} titleTo={`/bits-and-bobs/${id}/`} iconTo={`/bits-and-bobs/${id}/`} />
                     <Typography color='secondary' align='right'>{`${items.length} ${bobsText}`}</Typography>
                 </CardContent>
             </Card>

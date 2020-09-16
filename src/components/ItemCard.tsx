@@ -35,7 +35,7 @@ const FolderCard: React.FC<ItemProps> = (props) => {
         <Box >
             <Card variant='outlined'>
                 <CardContent className={classes.root}>
-                    <Title title={title} icon={icon} to={`/bits-and-bobs/${containingFolder}/${id}/`} />
+                    <Title title={title} icon={icon} titleTo={`/bits-and-bobs/${containingFolder}/${id}/`} iconTo={`/bits-and-bobs/${containingFolder}/`} />
                     <Box>
                         {
                             long ? (
