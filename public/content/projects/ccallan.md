@@ -16,7 +16,7 @@ I plan on updating the site's [README](https://github.com/CamerAllan/ccallan/blo
 
 ### What's cookin'
 
-- I'm wanting to get into RSS feeds, so I'll find out how that works and `hook it up` at some point. 
+- I'm wanting to get into RSS feeds, so I'll find out how that works and hook it up at some point. 
 - Comments would be sweet but I imagine I'd have to pay for the pleasure of nobody writing any. 
 - A footer
 - These days anybody that's hip has a dark theme so that's coming
