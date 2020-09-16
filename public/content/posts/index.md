@@ -4,4 +4,4 @@ icon: 'Subject'
 live: true
 ---
 
-My blog posts.
+Posts and articles I've enjoyed (or written!).
