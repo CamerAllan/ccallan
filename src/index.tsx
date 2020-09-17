@@ -11,7 +11,6 @@ export default App
 if (typeof document !== 'undefined') {
 
   const target = document.getElementById('root')
-  document.title = "Cameron Allan"
 
   const renderMethod = target.hasChildNodes()
     ? ReactDOM.hydrate
