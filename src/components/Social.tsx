@@ -18,7 +18,7 @@ const Social: React.FC = () => {
     const classes = useStyles();
 
     return (
-        <PaddedBox size='large'>
+        <PaddedBox size='medium'>
             <Link href="https://github.com/CamerAllan">
                 <Box component='span' className={classes.social}>
                     <GitHubIcon fontSize='large' color='primary' />

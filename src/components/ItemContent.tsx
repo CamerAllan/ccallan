@@ -7,11 +7,11 @@ import { ColorLinkExternal } from './util/Link';
 
 const useStyles = (preview: boolean) => makeStyles((theme: Theme) => ({
     image: {
-        width: preview ? IMAGE_DIMENSIONS.PREVIEW.WIDTH : 'unset',
         height: preview ? IMAGE_DIMENSIONS.PREVIEW.HEIGHT : IMAGE_DIMENSIONS.FULL.MAX_HEIGHT,
         display: 'block',
         margin: '0 auto',
         maxWidth: '95%',
+        objectFit: 'cover',
         border: `0.4rem solid ${theme.palette.secondary.main}`
     },
     para: {
@@ -51,7 +51,7 @@ export default (props: ItemContentProps) => {
         return <p className={classes.para} {...props} />
     }
 
-    const imageQuery = preview ? `nf_resize=smartcrop&w=${IMAGE_DIMENSIONS.PREVIEW.WIDTH}&h=${IMAGE_DIMENSIONS.PREVIEW.HEIGHT}` : `nf_resize=fit&h=${IMAGE_DIMENSIONS.FULL.MAX_HEIGHT}`
+    const imageQuery = preview ? `nf_resize=fit&h=${IMAGE_DIMENSIONS.PREVIEW.HEIGHT}` : `nf_resize=fit&h=${IMAGE_DIMENSIONS.FULL.MAX_HEIGHT}`
 
     return (
         <Box className={preview ? classes.dark : classes.light}>

@@ -18,7 +18,7 @@ export const ColorLinkExternal: React.FC<LinkProps> = (props) => {
     const classes = useStyles();
 
     return (
-        <CoreLink className={classes.root} href={props.to} target="_blank">{props.children}</CoreLink>
+        <CoreLink className={classes.root} rel="noopener" href={props.to} target="_blank">{props.children}</CoreLink>
     )
 };
 

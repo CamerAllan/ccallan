@@ -18,7 +18,6 @@ export const TRACKING_ID = 'UA-163465341-1'
 
 export const IMAGE_DIMENSIONS = {
     PREVIEW: {
-        WIDTH: 250,
         HEIGHT: 250
     },
     FULL: {
