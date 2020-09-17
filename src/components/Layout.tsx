@@ -2,7 +2,7 @@ import React from "react";
 import Content from "./Content";
 import Sidebar from "./Sidebar";
 import { makeStyles, Box, useMediaQuery, Theme } from "@material-ui/core";
-import { SM, SPACING } from "../constants/Constants";
+import { SM, SPACING, XS } from "../constants/Constants";
 import Footer from "./Footer";
 
 const useStyles = makeStyles(theme => ({
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
 
 const Layout: React.FC = () => {
 
-    const desktop = useMediaQuery((theme: Theme) => theme.breakpoints.up(SM))
+    const mobile = useMediaQuery((theme: Theme) => theme.breakpoints.down(XS))
     const classes = useStyles();
 
     return (
@@ -40,7 +40,7 @@ const Layout: React.FC = () => {
             <Box className={classes.content}>
                 <Content />
             </Box>
-            {!desktop &&
+            {mobile &&
                 (<Box className={classes.footer}>
                     <Footer />
                 </Box>)

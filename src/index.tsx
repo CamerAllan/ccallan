@@ -1,23 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-// Your top level component
 import App from './App'
 import { ThemeProvider } from '@material-ui/core'
 import Theme from './theme'
 
-// Export your top level component as JSX (for static rendering)
+// Export top level component as JSX (for static rendering)
 export default App
 
-// Render your app
 if (typeof document !== 'undefined') {
 
   const target = document.getElementById('root')
+  document.title = "Cameron Allan"
 
   const renderMethod = target.hasChildNodes()
     ? ReactDOM.hydrate
     : ReactDOM.render
-
 
   const render = (Comp: Function) => {
     renderMethod(
@@ -30,7 +28,6 @@ if (typeof document !== 'undefined') {
     )
   }
 
-  // Render!
   render(App)
 
   // Hot Module Replacement

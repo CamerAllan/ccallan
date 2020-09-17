@@ -41,7 +41,7 @@ const getFolders = () => {
       }
     })
 
-    // Only add folder if it has correctly formed index
+    // Only add folder if it has a valid index
     if (folder.title) {
       folders.push(folder)
     } else {
