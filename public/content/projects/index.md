@@ -4,4 +4,4 @@ icon: 'Assignment'
 live: true
 ---
 
-Projects I'm working on.
+Projects I've been tinkering with.
